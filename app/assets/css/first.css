@@ -1,0 +1,36 @@
+.el-input__wrapper{
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.p-menubar-root-list {
+    gap: 35px !important;
+    flex-direction: row-reverse;
+}
+
+.example-showcase .el-dropdown-link {
+    cursor: pointer;
+    color: var(--el-color-primary);
+    display: flex;
+    align-items: center;
+}
+
+
+.mySwiper {
+    width: 85%;
+    margin: auto;
+}
+
+.iconsHover {
+    display: none;
+}
+
+.MostBuyed:hover .iconsHover,.first-sale:hover .iconsHover {
+    display: flex;
+}
+
+.iconsHover>div {
+    cursor: pointer;
+}
+
+
