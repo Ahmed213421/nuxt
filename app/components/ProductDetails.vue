@@ -4,8 +4,8 @@
             <span class=" text-[#1A1A1A] px-2 text-[32px] font-[500] border-b-[3px] border-b-[#C65C6A]">Product Deails</span>
         </div>
 
-        <div class="container mx-auto mt-[30px]">
-            <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4">
+        <div class="container mx-auto mt-[30px] p-3 xl:p-0">
+            <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-4 flex align-center">
                 
                 <div v-for="(review,index) in reviews" :key="review.id" :class="index === 0 ? 'col-span-2 border border-[1px] border-[#CF6F7A] row-span-2'  : ''">
                     

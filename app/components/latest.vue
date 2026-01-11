@@ -18,7 +18,7 @@
                     fill: 'row',
                 },
             },
-            768: {
+            1024: {
                 slidesPerView: 6,
                 grid: {
                     rows: 2,
