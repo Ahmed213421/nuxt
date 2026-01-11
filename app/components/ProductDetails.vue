@@ -10,8 +10,8 @@
                 <div v-for="(review,index) in reviews" :key="review.id" :class="index === 0 ? 'col-span-2 border border-[1px] border-[#CF6F7A] row-span-2'  : ''">
                     
                 
-                <div v-if="index == 0" class=" py-1 relative first-sale">
-                    <div class="flex flex-col absolute gap-[10px] top-[10px] right-[11px] iconsHover mt-5">
+                <div v-if="index == 0" class="relative py-5" style="box-sizing: border-box !important;">
+                    <div class="flex flex-col absolute gap-[10px] top-[10px] right-[11px] iconsHover    ">
                         <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center bg-[#F2F2F2]">
                             <IconsLike />
                         </div>
