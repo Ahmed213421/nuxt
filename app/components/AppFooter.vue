@@ -86,11 +86,21 @@ Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Ind
                 <div class="flex items-center xl:justify-around justify-between lg:flex-row flex-col gap-4 lg:gap-0 mt-5">
                     <h1 class="font-[600] text-[24px] tracking-[0.02em] relative after:absolute after:content-[''] after:left-0 after:bottom-[-5px] after:bg-black after:w-[60px] after:h-[1px]">Payment Methods</h1>
                     <div class="flex gap-[8px]">
-                        <IconsVisa />
-                        <IconsPayPal />
-                        <IconsMasterCard />
-                        <IconsVodafone />
-                        <IconsCash />
+                        <a href="#">
+                            <IconsVisa />
+                        </a>
+                        <a href="#">
+                            <IconsPayPal />
+                        </a>
+                        <a href="#">
+                            <IconsMasterCard />
+                        </a>
+                        <a href="#">
+                            <IconsVodafone />
+                        </a>
+                        <a href="#">
+                            <IconsCash />
+                        </a>
                     </div>
                 </div>
             </div>
