@@ -46,7 +46,7 @@
         class="mySwiperTestMonials relative"
       >
         <SwiperSlide v-for="n in 13" :key="n">
-          <div class="rounded-[8px] border border-[1px] bg-[#FFFFFF]  p-[24px] gap-[16px] flex flex-col xl:w-[424px]">
+          <div class="rounded-[8px] border border-[1px] bg-[#FFFFFF]  p-[24px] gap-[16px] flex flex-col ">
             <IconsQuote />
             <div class="text font-[400] text-[14px] text-[#4D4D4D]">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</div>
             <div class="flex justify-between align-baseline  pt-[8px] xl:items-center flex-col xl:flex-row">
