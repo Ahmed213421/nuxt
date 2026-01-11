@@ -1,6 +1,6 @@
 <template>
     <ClientOnly>
-    <div class="relative testmonials py-[100px] mt-[10%] bg-[#F2F2F2]">
+    <div class="relative testmonials pt-[100px] pb-[50px] mt-[10%] bg-[#F2F2F2]">
     <div class="absolute top-[10%] xl:left-[70px] lg:left-[50px] md:left-[40px] left-[20px]">
       <h1 class="mx-auto text-[20px] md:text-[32px] font-[600]">Client Testimonials</h1>
     </div>
