@@ -1,7 +1,7 @@
 <template>
-    <div class=" border-b border-[#246062]">
+    <div class=" border-b border-[#246062] hidden md:block">
 
-    <header class="flex container mx-auto justify-between items-center">
+    <header class="flex container p-2 xl:p-0 mx-auto justify-between items-center">
         <div class="flex">
             <IconsIconHeader />
         </div>
@@ -72,62 +72,62 @@
                     <a href="#" class="border rounded-[12px] border border-[1.5px] border-[#CF6F7A] py-[13px] px-[19px] text-[#CF6F7A]">Register</a>
                 </div>
             </div>
-            <Menu as="div" class="relative inline-block text-left">
+            <Menu as="div" class="relative inline-block text-left hidden lg:block">
     <!-- 3 dots button -->
-    <MenuButton
-      class="py-[3px] px-[11px] rounded-[12px] w-[214px] items-center flex justify-between align-center focus:outline-none border border-[#CF6F7A]"
-    >
-    <div class="flex gap-[6px] items-center">
-        <div class="avatar-wrapper w-[31px] h-[31px] rounded-[6px]">
-            <img src="/user.png" alt="">
-        </div>
-        <div class="text-start">
-            <div class="font-[600] text-[12px]">Andy Warhol</div>
-            <div class="font-[500] text-[12px] text-[#28353D]">andywarhol@mail.com</div>
-        </div>
-    </div>
-      <EllipsisVerticalIcon class="w-5 h-5 text-gray-600" />
-    </MenuButton>
+            <MenuButton
+              class="py-[3px] px-[11px] rounded-[12px] w-[214px] items-center flex justify-between align-center focus:outline-none border border-[#CF6F7A]"
+            >
+            <div class="flex gap-[6px] items-center">
+                <div class="avatar-wrapper w-[31px] h-[31px] rounded-[6px]">
+                    <img src="/user.png" alt="">
+                </div>
+                <div class="text-start">
+                    <div class="font-[600] text-[12px]">Andy Warhol</div>
+                    <div class="font-[500] text-[12px] text-[#28353D]">andywarhol@mail.com</div>
+                </div>
+            </div>
+              <EllipsisVerticalIcon class="w-5 h-5 text-gray-600" />
+            </MenuButton>
 
     <!-- Dropdown -->
-    <MenuItems
-      class="absolute right-0 z-10 mt-2 w-40 origin-top-right
-             rounded-md bg-white shadow-lg ring-1 ring-black/5"
-    >
-      <MenuItem v-slot="{ active }">
-        <button
-          :class="[
-            'block w-full px-4 py-2 text-left text-sm',
-            active && 'bg-gray-100'
-          ]"
-        >
-          View profile
-        </button>
-      </MenuItem>
+            <MenuItems
+              class="absolute right-0 z-10 mt-2 w-40 origin-top-right
+                    rounded-md bg-white shadow-lg ring-1 ring-black/5"
+            >
+              <MenuItem v-slot="{ active }">
+                <button
+                  :class="[
+                    'block w-full px-4 py-2 text-left text-sm',
+                    active && 'bg-gray-100'
+                  ]"
+                >
+                  View profile
+                </button>
+              </MenuItem>
 
-      <MenuItem v-slot="{ active }">
-        <button
-          :class="[
-            'block w-full px-4 py-2 text-left text-sm',
-            active && 'bg-gray-100'
-          ]"
-        >
-          Edit
-        </button>
-      </MenuItem>
+              <MenuItem v-slot="{ active }">
+                <button
+                  :class="[
+                    'block w-full px-4 py-2 text-left text-sm',
+                    active && 'bg-gray-100'
+                  ]"
+                >
+                  Edit
+                </button>
+              </MenuItem>
 
-      <MenuItem v-slot="{ active }">
-        <button
-          :class="[
-            'block w-full px-4 py-2 text-left text-sm text-red-600',
-            active && 'bg-gray-100'
-          ]"
-        >
-          Logout
-        </button>
-      </MenuItem>
-    </MenuItems>
-  </Menu>
+              <MenuItem v-slot="{ active }">
+                <button
+                  :class="[
+                    'block w-full px-4 py-2 text-left text-sm text-red-600',
+                    active && 'bg-gray-100'
+                  ]"
+                >
+                  Logout
+                </button>
+              </MenuItem>
+            </MenuItems>
+          </Menu>
         </div>
         
     </header>
