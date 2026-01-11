@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto">
   <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 md:grid-cols-2 mt-[60px] shadow-[0_8px_40px_0_rgba(0,38,3,0.08)]  p-[40px] rounded-[8px]">
-    <div class="flex items-center justify-start md:justify-center xl:justify-start gap-[16px] xl:mt-[0px]" :class="[index >= 2 ? 'md:mt-[20px]' : 'lg:mt-0',index == 3 ? 'md:ml-[27px]' : 'xl:ml-[0px]']" v-for="(item,index) in features" :key="item.id">
+    <div class="flex items-center justify-start md:justify-center xl:justify-start gap-[16px] mt-5 xl:mt-[0px]" :class="[index >= 2 ? 'md:mt-[20px]' : 'lg:mt-0',index == 3 ? 'md:ml-[27px]' : 'xl:ml-[0px]']" v-for="(item,index) in features" :key="item.id">
       <component :is="item.icon" />
       <div class="flex flex-col gap-[3px] md:gap-[8px]">
         <span class="text-[16px] font-[600] text-[#1A1A1A]">{{item.title}}</span>
