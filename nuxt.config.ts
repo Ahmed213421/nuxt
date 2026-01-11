@@ -14,6 +14,11 @@ export default defineNuxtConfig({
   '@fortawesome/fontawesome-svg-core/styles.css',
 
   ],
+
+  tailwindcss: {
+    exposeConfig: true,
+  },
+  
   primevue: {
     options: {
       theme: {
