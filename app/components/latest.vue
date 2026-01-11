@@ -26,7 +26,7 @@
                      },
                  },
              }"        
-             :space-between="30"
+             :space-between="5"
              :navigation="{
                prevEl: prevEl,
                nextEl: nextEl,
