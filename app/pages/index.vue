@@ -14,9 +14,9 @@
 
   <Feature />
 
-  <div class="models mt-[50px]">
+  <div class="models mt-[50px] p-5 xl:p-0">
     <div class="container mx-auto">
-      <div class="flex justify-between xl:w-[95%] w-[83%] lg:w-[85%]  mx-auto">
+      <div class="flex justify-between mx-auto">
         <div class="latest font-[500] lg:text-[24px] "><span class="after:content-[''] relative after:absolute xl:after:left-0 after:left-0 after:bottom-[-6px] after:w-[110.94px] after:h-[2.75px] after:bg-[#C65C6A]  xl:ml-0">Latest</span></div>
         <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <IconsRightArrow /></a>
       </div>
@@ -24,11 +24,11 @@
 
     
   </div>
-  <Latest class="mt-4"/>
+  <Latest class="mt-4 md:px-[70px] px-[50px] xl:p-0"/>
 
-  <div class="models mt-[50px] ">
+  <div class="models mt-[50px] p-5 xl:p-0">
     <div class="container mx-auto">
-      <div class="flex justify-between  xl:w-[95%] w-[83%] lg:w-[85%]  mx-auto">
+      <div class="flex justify-between mx-auto">
                 <div class="latest font-[500] lg:text-[24px] "><span class="after:content-[''] relative after:absolute xl:after:left-0 after:left-0 after:bottom-[-6px] after:w-[160.94px] after:h-[2.75px] after:bg-[#C65C6A] xl:ml-0">Most Buyed</span></div>
 
         <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <IconsRightArrow /></a>
@@ -37,12 +37,12 @@
 
   </div>
     
-  <MostBuyed class="mt-4"/>
+  <MostBuyed class="mt-4 md:px-[70px] px-[50px] xl:p-0"/>
     
     
-  <div class="models mt-[50px]">
+  <div class="models mt-[50px] p-5 xl:p-0">
     <div class="container mx-auto">
-      <div class="flex justify-between  xl:w-[95%] w-[83%] lg:w-[85%]  mx-auto">
+      <div class="flex justify-between mx-auto">
                 <div class="latest font-[500] lg:text-[24px] "><span class="after:content-[''] relative after:absolute xl:after:left-0 after:left-0 after:bottom-[-6px] after:w-[200.94px] after:h-[2.75px] after:bg-[#C65C6A] xl:ml-0">Most Common</span></div>
 
         <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <IconsRightArrow /></a>
@@ -50,10 +50,10 @@
     </div>
 
 
-    <MostCommon class="mt-4"/>
     
     
   </div>
+  <MostCommon class="mt-4 md:px-[70px] px-[50px] xl:p-0"/>
   
   <Deals />
   

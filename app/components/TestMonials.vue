@@ -1,14 +1,16 @@
 <template>
     <ClientOnly>
-    <div class="relative testmonials pt-[100px] pb-[50px] mt-[10%] bg-[#F2F2F2]">
-    <div class="absolute top-[10%] xl:left-[70px] lg:left-[50px] md:left-[40px] left-[20px]">
+       <div class="bg-[#F2F2F2]">
+         <div class="container mx-auto px-5">
+    <div class="relative testmonials pt-[100px] pb-[50px] mt-[10%] ">
+    <div class="absolute top-[10%] xl:left-0 ">
       <h1 class="mx-auto text-[20px] md:text-[32px] font-[600]">Client Testimonials</h1>
     </div>
 
       <!-- External buttons -->
       <div class="flex justify-end gap-4 mb-4">
-        <button ref="prevEl" class="nav-btn w-[45px] bg-white h-[45px] absolute xl:right-[9%] md:right-[13%] lg:right-[11%] right-[20%] top-[10%]  rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center"><IconsLeftArrow /></button>
-        <button ref="nextEl" class="nav-btn w-[45px] h-[45px] absolute xl:right-[5%] md:right-[5%] !lg:right-[7.5%] right-5 top-[10%]  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A] bg-[#C65C6A]">
+        <button ref="prevEl" class="nav-btn w-[45px] bg-white h-[45px] absolute xl:right-[5%] md:right-[8%] lg:right-[6%] right-[19%]  top-[10%]  rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center"><IconsLeftArrow /></button>
+        <button ref="nextEl" class="nav-btn w-[45px] h-[45px] absolute xl:right-[0%] top-[10%]  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A] bg-[#C65C6A]">
           <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.75 6.7749H0.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M9.7002 0.75L15.7502 6.774L9.7002 12.799" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -70,6 +72,8 @@
       </Swiper>
 
     </div>
+    </div>
+    </div>
   </ClientOnly>
 </template>
 
@@ -91,10 +95,7 @@ const onSwiper = (swiper) => {
 <style scoped>
 
 
-.mySwiperTestMonials {
-  width: 90%;
-  margin:auto;
-}
+
 
 
 </style>
