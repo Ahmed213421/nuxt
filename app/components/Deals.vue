@@ -4,7 +4,7 @@
             <span class=" text-[#1A1A1A] px-2 text-[32px] font-[500] border-b-[3px] border-b-[#C65C6A]">Deals</span>
         </div>
 
-        <div class="container mx-auto mt-[30px]">
+        <div class="container mx-auto mt-[30px] xl:mt-[70px]">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <div class="lg:h-[536px] h-[300px]">
                     <div :style="{ backgroundImage: `url(/banner-1.jpg)`}" class="h-full bg-cover bg-center">

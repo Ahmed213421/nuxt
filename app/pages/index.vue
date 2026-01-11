@@ -55,7 +55,7 @@
   </div>
   <MostCommon class="mt-4 md:px-[70px] px-[50px] xl:p-0"/>
   
-  <Deals />
+  <Deals class="my-10"/>
   
   <ProductDetails />
 
