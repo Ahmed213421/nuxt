@@ -13,6 +13,13 @@
         :modules="[Grid, Navigation]"
         :breakpoints="{
             0: {
+                slidesPerView: 2,
+                grid: {
+                    rows: 1,
+                    fill: 'row',
+                },
+            },
+            768: {
                 slidesPerView: 3,
                 grid: {
                     rows: 1,

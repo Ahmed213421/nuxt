@@ -1,6 +1,6 @@
 <template>
     <div class="footer bg-[#F9F9F9] px-6 py-12 md:p-20">
-        <div class="container mx-auto px-[30px] md:px-[70px] xl:px-0 ">
+        <div class="container mx-auto md:px-[70px] xl:px-0 ">
             <div class="grid grid-cols-12  md:gap-[48px] gap-[20px]">
             <!-- <div class="grid grid-cols-1 grid-cols-3 gap-4"> -->
                  <div class="col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-3">
@@ -66,7 +66,7 @@ Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Ind
                         </ul>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-3" >
+                <div class="col-span-12 md:col-span-6 lg:col-span-3" >
                     <div class="flex flex-col gap-[16px]">
                         <h1 class="font-[600] text-[24px] tracking-[0.02em] relative after:absolute after:content-[''] after:left-0 after:bottom-[-5px] after:bg-black after:w-[60px] after:h-[1px]">Campaign</h1>
                         <ul>
