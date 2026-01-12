@@ -231,7 +231,7 @@
             </div>
             <div class="col-span-12 md:col-span-7 lg:col-span-8">
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div v-for="(item,index) in paginatedItems" :key="index" class="rounded-[5px] border border-[0.92px] border-[#E6E6E6]  pb-[15px] gap-[16px] flex flex-col relative MostBuyed" :class="index == 2 ? 'border !border-[#CF6F7A]' : ''">
+                    <div v-for="(item,index) in paginatedItems" :key="index" class="px-[10px] rounded-[5px] border border-[0.92px] border-[#E6E6E6]  pb-[15px] gap-[16px] flex flex-col relative MostBuyed" :class="index == 2 ? 'border !border-[#CF6F7A]' : ''">
                         <div :class="index == 5 ? 'block' : 'hidden'" class="save bg-[#EA4B48] text-center py-[2.75px] top-[10px] text-[#FFFFFF] absolute left-[11px] px-[7.33px] rounded-[3.67px] w-[73px] font-[400] text-[12.83px]">
                             save <span class="discount-number font-[500]">50% </span>
                         </div>
