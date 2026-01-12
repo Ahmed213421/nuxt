@@ -1,4 +1,15 @@
 <template>
+    <div class="bg-[#F2F4F5]">
+    <div class="container mx-auto py-5 px-6">
+
+            <el-breadcrumb :separator-icon="ArrowRight">
+                <el-breadcrumb-item  :to="{ path: '/product-skin' }">Products</el-breadcrumb-item>
+                <el-breadcrumb-item>Product Details</el-breadcrumb-item>
+                <el-breadcrumb-item><span :class="route.path === '/product-skin' ? 'text-[#C65C6A]' : ''">Skincare</span></el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
+        
+    </div>
     <div class="container mx-auto p-5">
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-3">
@@ -296,6 +307,13 @@
 import { ref,computed,onMounted } from 'vue'
 
 import type { CollapseModelValue } from 'element-plus'
+import { useRoute } from 'vue-router'
+
+import { ArrowRight } from '@element-plus/icons-vue'
+
+const route = useRoute()
+
+
 const checked1 = ref(true)
 const checked2 = ref(false)
 const checked3 = ref(false)
