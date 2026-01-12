@@ -18,7 +18,7 @@
     <div class="container mx-auto">
       <div class="flex justify-between mx-auto">
         <div class="latest font-[500] lg:text-[24px] "><span class="after:content-[''] relative after:absolute xl:after:left-0 after:left-0 after:bottom-[-6px] after:w-[110.94px] after:h-[2.75px] after:bg-[#C65C6A]  xl:ml-0">Latest</span></div>
-        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <IconsRightArrow /></a>
+        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <SvgRightArrow /></a>
       </div>
     </div>
 
@@ -31,7 +31,7 @@
       <div class="flex justify-between mx-auto">
                 <div class="latest font-[500] lg:text-[24px] "><span class="after:content-[''] relative after:absolute xl:after:left-0 after:left-0 after:bottom-[-6px] after:w-[160.94px] after:h-[2.75px] after:bg-[#C65C6A] xl:ml-0">Most Buyed</span></div>
 
-        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <IconsRightArrow /></a>
+        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <SvgRightArrow /></a>
       </div>
     </div>
 
@@ -45,7 +45,7 @@
       <div class="flex justify-between mx-auto">
                 <div class="latest font-[500] lg:text-[24px] "><span class="after:content-[''] relative after:absolute xl:after:left-0 after:left-0 after:bottom-[-6px] after:w-[200.94px] after:h-[2.75px] after:bg-[#C65C6A] xl:ml-0">Most Common</span></div>
 
-        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <IconsRightArrow /></a>
+        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">View All <SvgRightArrow /></a>
       </div>
     </div>
 

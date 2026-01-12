@@ -5,8 +5,8 @@
 
       <!-- External buttons -->
       <div class="flex justify-end gap-4 mb-4">
-        <button ref="prevEl" class="nav-btn z-10 absolute xl:left-[20px] top-1/2 lg:left-4 left-2 rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A]"><IconsLeftArrowSlider /></button>
-        <button ref="nextEl" class="nav-btn z-10 absolute xl:right-[20px] lg:right-4 right-2 top-1/2  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A]"><IconsRightArrowSlider /></button>
+        <button ref="prevEl" class="nav-btn z-10 absolute xl:left-[20px] top-1/2 lg:left-4 left-2 rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A]"><SvgLeftArrowSlider /></button>
+        <button ref="nextEl" class="nav-btn z-10 absolute xl:right-[20px] lg:right-4 right-2 top-1/2  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A]"><SvgRightArrowSlider /></button>
       </div>
 
       <Swiper
@@ -50,10 +50,10 @@
 
             <div class="flex flex-col absolute gap-[10px] top-[10px] right-[11px] iconsHover">
                 <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
-                    <IconsLike />
+                    <SvgLike />
                 </div>
                 <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
-                    <IconsViewItem />
+                    <SvgViewItem />
                 </div>
             </div>
             <div>
@@ -76,11 +76,11 @@
                 </div>
                 <div class="flex flex-1 flex-col gap-[5.5px]">
                     <div class="flex justify-center md:gap-[7.33px] gap-[3px] text-[#C65C6A] rounded-[11px] items-center py-[2.75px] pl-[3.58px] px-[4.58px] border border-[#C65C6A] border-[1.83px]">
-                        <IconsCart />
+                        <SvgCart />
                         <a href="#" class=" font-[600] xl:text-[12.83px] lg:text-[12px] md:text-[11px] text-[10px]">Add To Cart</a>
                     </div>
                     <div class="flex md:gap-[7.33px] gap-[3px] text-[#618EB1]  justify-center rounded-[11px] items-center py-[2.75px] pl-[3.58px] px-[4.58px] border border-[#618EB1] border-[1.83px]">
-                        <IconsBuyNow />
+                        <SvgBuyNow />
                         <a href="#" class=" font-[600] text-[10px]  xl:text-[12.83px] lg:text-[12px] md:text-[11px]">Buy Now</a>
                     </div>
                 </div>

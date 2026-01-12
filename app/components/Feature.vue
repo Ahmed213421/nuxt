@@ -14,10 +14,10 @@
 
 <script setup>
     
-  import IconsFastShipping from '~/components/icons/FastShipping.vue'
-  import IconsHeadPhones from '~/components/icons/HeadPhones.vue'
-  import IconsShoppingBag from '~/components/icons/ShoppingBag.vue'
-  import IconsPackage from '~/components/icons/Package.vue'
+  import IconsFastShipping from '~/components/svg/FastShipping.vue'
+  import IconsHeadPhones from '~/components/svg/HeadPhones.vue'
+  import IconsShoppingBag from '~/components/svg/ShoppingBag.vue'
+  import IconsPackage from '~/components/svg/Package.vue'
 const features = [
   {
     id: 1,

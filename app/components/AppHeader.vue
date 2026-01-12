@@ -3,7 +3,7 @@
 
     <header class="flex container p-2 xl:p-0 mx-auto justify-between items-center">
         <div class="flex">
-            <IconsIconHeader />
+            <SvgIconHeader />
         </div>
         <div class="py-[23px] h-[44px] items-center  flex gap-[24px]">
             <div class="relative w-full max-w-sm">
@@ -35,7 +35,7 @@
                         </svg>
 
                     AR
-                    <IconsDropDown/>
+                    <SvgDropDown/>
                 </button>
 
                 <div class="absolute top-5 right-0 z-20 hidden w-48 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 group-focus-within:block">
@@ -51,13 +51,13 @@
 
             <div class="flex items-center gap-[24px] ">
                 <div class="relative">
-                    <IconsLikes />
+                    <SvgLikes />
                     <div class="badge-red">
 
                     </div>
                 </div>
                 <div class="relative">
-                    <IconsShoppingCart />
+                    <SvgShoppingCart />
                     <div class="badge-red">
 
                     </div>

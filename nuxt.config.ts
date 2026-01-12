@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', 'nuxt-swiper'],
+  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', 'nuxt-swiper','@element-plus/nuxt'],
 
   css: [
     '~/assets/css/first.css',    'primeicons/primeicons.css','swiper/css',

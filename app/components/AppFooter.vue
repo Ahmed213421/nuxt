@@ -5,7 +5,7 @@
             <!-- <div class="grid grid-cols-1 grid-cols-3 gap-4"> -->
                  <div class="col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-3">
                     <div class="flex flex-col gap-[16px]">
-                        <IconsIconHeader />
+                        <SvgIconHeader />
                         <div class="flex flex-col gap-[8px]">
                             <h1 class="font-[500] text-[20px] text-[#000000]">Address</h1>
                             <p class="font-[400] text-[16px] text-[#000000]">
@@ -15,7 +15,7 @@ Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Ind
                         </div>
                         <div class="flex flex-col gap-[8px]">
                             <h1 class="font-[500] text-[20px] text-[#000000]">Office Hour</h1>
-                            <p class="font-[400] text-[16px] text-[#000000]">
+                            <div class="font-[400] text-[16px] text-[#000000]">
                                 <div>
                                     <span class="from">Monday</span> <span>-</span> <span class="to">Sunday</span>
 
@@ -24,7 +24,7 @@ Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Ind
                                     <span class="from">10.00</span> <span>-</span> <span class="to">18.00</span>
 
                                 </div>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,10 +44,10 @@ Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Ind
                             <div class="font-[500] text-[16px] tracking-[0.03em] text-[#000000]">0811-235-9988</div>
                         </div>
                         <div class="flex gap-[24px]">
-                            <IconsWhatsAapp />
-                            <IconsFaceBook />
-                            <IconsTwitter />
-                        <IconsInstagram />
+                            <SvgWhatsAapp />
+                            <SvgFaceBook />
+                            <SvgTwitter />
+                        <SvgInstagram />
                         </div>
                     </div>
                 </div>
@@ -87,19 +87,19 @@ Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Ind
                     <h1 class="font-[600] text-[24px] tracking-[0.02em] relative after:absolute after:content-[''] after:left-0 after:bottom-[-5px] after:bg-black after:w-[60px] after:h-[1px]">Payment Methods</h1>
                     <div class="flex gap-[8px]">
                         <a href="#">
-                            <IconsVisa />
+                            <SvgVisa />
                         </a>
                         <a href="#">
-                            <IconsPayPal />
+                            <SvgPayPal />
                         </a>
                         <a href="#">
-                            <IconsMasterCard />
+                            <SvgMasterCard />
                         </a>
                         <a href="#">
-                            <IconsVodafone />
+                            <SvgVodafone />
                         </a>
                         <a href="#">
-                            <IconsCash />
+                            <SvgCash />
                         </a>
                     </div>
                 </div>

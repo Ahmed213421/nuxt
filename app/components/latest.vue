@@ -5,8 +5,8 @@
 
       <!-- External buttons -->
       <div class="flex justify-end gap-4 mb-4">
-        <button ref="prevEl" class="nav-btn z-10 absolute xl:left-[20px] top-1/2 lg:left-4 left-2 rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A]"><IconsLeftArrowSlider /></button>
-        <button ref="nextEl" class="nav-btn z-10 absolute xl:right-[20px] lg:right-4 right-2 top-1/2  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A]"><IconsRightArrowSlider /></button>
+        <button ref="prevEl" class="nav-btn z-10 absolute xl:left-[20px] top-1/2 lg:left-4 left-2 rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A]"><SvgLeftArrowSlider /></button>
+        <button ref="nextEl" class="nav-btn z-10 absolute xl:right-[20px] lg:right-4 right-2 top-1/2  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A]"><SvgRightArrowSlider /></button>
       </div>
            <Swiper
              :modules="[Grid, Navigation]"

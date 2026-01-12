@@ -55,7 +55,7 @@
                         <span class="text-[14px] font-[600] text-[#C65C6A]">
                             Shop Now
                         </span>
-                        <IconsRightArrow class="w-5 h-5" />
+                        <SvgRightArrow class="w-5 h-5" />
                     </a>
                     </div>
 
@@ -83,7 +83,7 @@
                         <span class="text-[14px] font-[600] text-[#C65C6A]">
                             Shop Now
                         </span>
-                        <IconsRightArrow class="w-5 h-5" />
+                        <SvgRightArrow class="w-5 h-5" />
                     </a>
                     </div>
 
@@ -112,7 +112,7 @@
                         <span class="text-[14px] font-[600] text-[#C65C6A]">
                             Shop Now
                         </span>
-                        <IconsRightArrow class="w-5 h-5" />
+                        <SvgRightArrow class="w-5 h-5" />
                     </a>
                     </div>
 

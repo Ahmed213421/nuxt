@@ -9,7 +9,7 @@
 
       <!-- External buttons -->
       <div class="flex justify-end gap-4 mb-4">
-        <button ref="prevEl" class="nav-btn w-[45px] bg-white h-[45px] absolute xl:right-[5%] md:right-[8%] lg:right-[6%] right-[19%]  top-[10%]  rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center"><IconsLeftArrow /></button>
+        <button ref="prevEl" class="nav-btn w-[45px] bg-white h-[45px] absolute xl:right-[5%] md:right-[8%] lg:right-[6%] right-[19%]  top-[10%]  rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center"><SvgLeftArrow /></button>
         <button ref="nextEl" class="nav-btn w-[45px] h-[45px] absolute xl:right-[0%] top-[10%]  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A] bg-[#C65C6A]">
           <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.75 6.7749H0.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -47,7 +47,7 @@
       >
         <SwiperSlide v-for="n in 13" :key="n">
           <div class="rounded-[8px] border border-[1px] bg-[#FFFFFF]  p-[24px] gap-[16px] flex flex-col ">
-            <IconsQuote />
+            <SvgQuote />
             <div class="text font-[400] text-[14px] text-[#4D4D4D]">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</div>
             <div class="flex justify-between align-baseline  pt-[8px] xl:items-center flex-col xl:flex-row">
                 <div class="flex gap-[12px] items-center">

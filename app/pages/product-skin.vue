@@ -252,10 +252,10 @@
 
                         <div class="flex flex-col absolute gap-[10px] top-[10px] right-[11px] iconsHover">
                             <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
-                                <IconsLike />
+                                <SvgLike />
                             </div>
                             <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
-                                <IconsViewItem />
+                                <SvgViewItem />
                             </div>
                         </div>
                         <div>
@@ -278,11 +278,11 @@
                             </div>
                             <div class="flex flex-1 flex-col gap-[5.5px] mt-4">
                                 <div class="flex justify-center md:gap-[7.33px] gap-[3px] text-[#C65C6A] rounded-[11px] items-center py-[2.75px] pl-[3.58px] px-[4.58px] border border-[#C65C6A] border-[1.83px]">
-                                    <IconsCart />
+                                    <SvgCart />
                                     <a href="#" class=" font-[600] xl:text-[12.83px] lg:text-[12px] md:text-[11px] text-[10px]">Add To Cart</a>
                                 </div>
                                 <div class="flex md:gap-[7.33px] gap-[3px] text-[#618EB1]  justify-center rounded-[11px] items-center py-[2.75px] pl-[3.58px] px-[4.58px] border border-[#618EB1] border-[1.83px]">
-                                    <IconsBuyNow />
+                                    <SvgBuyNow />
                                     <a href="#" class=" font-[600] text-[10px]  xl:text-[12.83px] lg:text-[12px] md:text-[11px]">Buy Now</a>
                                 </div>
                             </div>
