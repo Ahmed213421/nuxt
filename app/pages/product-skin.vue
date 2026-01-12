@@ -171,8 +171,8 @@
                             <h1 class="font-[500] text-[20px] text-[#1A1A1A]">Sale Products</h1>
                             <div class="flex flex-col gap-[16px]">
                                 <div class="flex border border-[#E6E6E6] rounded-[6px]">
-                                    <div class="p-5">
-                                        <img src="/cream.png" class="h-[98px] h-[98px]" alt="">
+                                    <div class="p-5 w-[112px]">
+                                        <img src="/cream.png" class="w-[98px] h-[98px]" alt="">
                                     </div>
                                     <div class="flex flex-col gap-[4px]  justify-center">
                                         <span class="text-[#4D4D4D] font-[400] text-[14px]">Foundation</span>
@@ -189,8 +189,8 @@
                                 </div>
                                 
                                 <div class="flex border border-[#C65C6A] rounded-[6px]">
-                                    <div class="p-5">
-                                        <img src="/stick.png" class="h-[98px] h-[98px]" alt="">
+                                    <div class="p-5 w-[112px]">
+                                        <img src="/stick.png" class="w-[98px] h-[98px]" alt="">
                                     </div>
                                     <div class="flex flex-col gap-[4px]  justify-center">
                                         <span class="text-[#4D4D4D] font-[400] text-[14px]">Foundation</span>
@@ -206,8 +206,8 @@
                                     </div>
                                 </div>
                                 <div class="flex border border-[#E6E6E6] rounded-[6px]">
-                                    <div class="p-5">
-                                        <img src="/cream2.png" class="h-[98px] h-[98px]" alt="">
+                                    <div class="p-5 w-[112px]">
+                                        <img src="/cream2.png" class="w-[98px] h-[98px]" alt="">
                                     </div>
                                     <div class="flex flex-col gap-[4px]  justify-center">
                                         <span class="text-[#4D4D4D] font-[400] text-[14px]">Foundation</span>
