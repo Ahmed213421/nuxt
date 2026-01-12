@@ -101,9 +101,9 @@
                     <el-collapse v-model="activeNames" @change="handleChange">
                     <el-collapse-item name="4">
                         <template #title>
-                            <span class="font-[500] text-[20px]">Rating</span>
+                            <span class="font-[500] text-[20px]">Popular Tag</span>
                         </template>
-                        <div class="flex flex-wrap gap-[8px] items-center">
+                        <div class="flex flex-wrap gap-[8px] items-center mt-3">
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
                             ترطيب
                             </a>

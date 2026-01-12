@@ -35,12 +35,14 @@
              class="mySwiper relative"
            >
              <SwiperSlide v-for="(n,index) in 13" :key="n">
-               <div :class="index === 2 ? 'border-[#CF6F7A]' : 'border-[#E6E6E6]'" class="rounded-[5px] border border-[1px]  pt-[16px] pb-[24px] gap-[16px] flex flex-col">
-                 <div>
-                     <img src="/cleansers.jpg" class="w-full" alt="">
-                 </div>
-                 <span class="font-[500] lg:text-[18px] text-[10px]  text-center" :class="index === 2 ? 'text-[#CF6F7A]' : ''">Cleansers</span>
-               </div>
+              <a href="#">
+                <div :class="index === 2 ? 'border-[#CF6F7A]' : 'border-[#E6E6E6]'" class="rounded-[5px] border border-[1px]  pt-[16px] pb-[24px] gap-[16px] flex flex-col">
+                  <div>
+                    <img src="/cleansers.jpg" class="w-full" alt="">
+                  </div>
+                  <span class="font-[500] lg:text-[18px] text-[10px]  text-center" :class="index === 2 ? 'text-[#CF6F7A]' : ''">Cleansers</span>
+                </div>
+              </a>
              </SwiperSlide>
            </Swiper>
        

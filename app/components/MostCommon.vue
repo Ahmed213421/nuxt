@@ -45,7 +45,7 @@
         <SwiperSlide v-for="(n,index) in 13" :key="n">
           <div class="rounded-[5px] border border-[0.92px] border-[#E6E6E6]  pb-[15px] gap-[16px] flex flex-col relative MostBuyed" :class="index == 2 ? 'border !border-[#CF6F7A]' : ''">
             <div class="save bg-[#EA4B48] text-center py-[2.75px] top-[10px] text-[#FFFFFF] absolute left-[11px] px-[7.33px] rounded-[3.67px] w-[73px] font-[400] text-[12.83px]">
-                save <span class="discount-number fofnt-[500]">50% </span>
+                save <span class="discount-number font-[500]">50% </span>
             </div>
 
             <div class="flex flex-col absolute gap-[10px] top-[10px] right-[11px] iconsHover">
