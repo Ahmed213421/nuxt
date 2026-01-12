@@ -2,8 +2,13 @@
     <div class="container mx-auto p-5">
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-3">
+                <el-collapse v-model="activeNames">
+                    <el-collapse-item :name="!isMobile ? '5' : ''">
+                        <template #title>
+                            <span class="font-[500] text-[20px]">Filter</span>
+                        </template>
                 <div class="demo-collapse">
-                    <el-collapse v-model="activeNames" @change="handleChange">
+                    <el-collapse v-model="activeNames">
                     <el-collapse-item name="1">
                         <template #title>
                             <span class="font-[500] text-[20px]">All Categories</span>
@@ -38,7 +43,7 @@
                         </div>
                         </el-collapse-item>
                     </el-collapse>
-                    <el-collapse v-model="activeNames" @change="handleChange">
+                    <el-collapse v-model="activeNames">
                     <el-collapse-item name="2">
                         <template #title>
                             <span class="font-[500] text-[20px]">Price</span>
@@ -51,7 +56,7 @@
                             </div>
                         </el-collapse-item>
                     </el-collapse>
-                    <el-collapse v-model="activeNames" @change="handleChange">
+                    <el-collapse v-model="activeNames">
                     <el-collapse-item name="3">
                         <template #title>
                             <span class="font-[500] text-[20px]">Rating</span>
@@ -98,7 +103,7 @@
                         </div>
                         </el-collapse-item>
                     </el-collapse>
-                    <el-collapse v-model="activeNames" @change="handleChange">
+                    <el-collapse v-model="activeNames">
                     <el-collapse-item name="4">
                         <template #title>
                             <span class="font-[500] text-[20px]">Popular Tag</span>
@@ -221,6 +226,8 @@
                             </div>
                         </div>
                 </div>
+                </el-collapse-item>
+                </el-collapse>
             </div>
             <div class="col-span-12 md:col-span-7 lg:col-span-8">
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -286,7 +293,7 @@
 </template>
 <script setup lang="ts">
 
-import { ref,computed } from 'vue'
+import { ref,computed,onMounted } from 'vue'
 
 import type { CollapseModelValue } from 'element-plus'
 const checked1 = ref(true)
@@ -306,9 +313,8 @@ const items = ref([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]);
 
 const reviews = ref([{ id: 1, rating: 4 }])
 
-// Pagination state
 const currentPage = ref(1)
-const pageSize = ref(15) // 3 columns * 3 rows
+const pageSize = ref(15) 
 
 // Items to show on current page
 const paginatedItems = computed(() => {
@@ -319,17 +325,30 @@ const paginatedItems = computed(() => {
 
 const onPageChange = (page: number) => {
   currentPage.value = page
-  // optional: scroll to top of cards
-  // window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 const value = ref([4, 8])
 
 
-const activeNames = ref(['1','2','3','4','5'])
-const handleChange = (val:CollapseModelValue) => {
-  console.log(val)
+const activeNames = ref(['1','2','3','4','5','6'])
+// const handleChange = (val:CollapseModelValue) => {
+//   console.log(val)
+// }
+
+const isMobile = ref(false)
+const minWidth = 768
+
+const checkDevice = () => {
+  isMobile.value =
+    window.innerWidth < minWidth || screen.width < minWidth
 }
+
+onMounted(() => {
+  checkDevice()
+  window.addEventListener('resize', checkDevice)
+})
+
+
 </script>
 <style scoped>
 .example-pagination-block + .example-pagination-block {
