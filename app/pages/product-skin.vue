@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto p-5 xl:p-0">
+    <div class="container mx-auto p-5">
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-3">
                 <div class="demo-collapse">
@@ -302,13 +302,13 @@ const threeStars = ref(false)
 const twoStars = ref(false)
 const oneStar = ref(false)
 
-const items = ref([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]);
+const items = ref([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]);
 
 const reviews = ref([{ id: 1, rating: 4 }])
 
 // Pagination state
 const currentPage = ref(1)
-const pageSize = ref(10) // 3 columns * 3 rows
+const pageSize = ref(15) // 3 columns * 3 rows
 
 // Items to show on current page
 const paginatedItems = computed(() => {

@@ -29,8 +29,9 @@
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start md:justify-center">
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex lg:gap-[38px] text-sm">
-              <a class="w-[80px] text-sm font-medium text-black" href="#">
-               <span class=" border-b-2 border-[#CF6F7A]">Home</span></a>
+                <NuxtLink to="/" class="w-[80px] text-sm font-medium text-black">
+                <span class=" border-b-2 border-[#CF6F7A]">Home</span>
+              </NuxtLink>
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>Products</span></a>
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>Offers</span></a>
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>About Us</span></a>

@@ -6,8 +6,10 @@
 
 <style scoped>
 #bg-banner{
-    background-image: url('/bgbanner.png');
+    background-image: url('/bgSale.jpg');
     width: 100%;
     height: 358px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 </style>

@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div>
-                <img src="/ImgSliderBuyed1.png" alt="">
+                <img src="/ImgSliderBuyed1.png" class="w-full" alt="">
             </div>
             <div class="flex px-1 flex-col xl:flex-row">
                 <div class="flex flex-col  gap-[5.5px]">
