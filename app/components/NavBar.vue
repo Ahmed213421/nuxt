@@ -30,14 +30,13 @@
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex lg:gap-[38px] text-sm">
                 <NuxtLink to="/" class="w-[80px] text-sm font-medium text-black">
-                <span class=" border-b-2 border-[#CF6F7A]">Home</span>
+                <span class=" border-b-2 border-[#CF6F7A]">{{$t('home')}}</span>
               </NuxtLink>
-              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>Products</span></a>
-              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>Offers</span></a>
-              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>About Us</span></a>
-              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>About Us</span></a>
-              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>Categories</span></a>
-              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>Contact Us</span></a>
+              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('products')}}</span></a>
+              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('offers')}}</span></a>
+              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('aboutUs')}}</span></a>
+              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('categories')}}</span></a>
+              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('contactUs')}}</span></a>
             </div>
           </div>
         </div>
@@ -58,5 +57,7 @@
 
 <script setup>
 import { ref } from 'vue'
+
+const { locale } = useI18n()
 const mobileOpen = ref(false)
 </script>

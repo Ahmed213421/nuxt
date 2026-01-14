@@ -12,7 +12,7 @@
              :modules="[Grid, Navigation]"
              :breakpoints="{
                  0: {
-                     slidesPerView: 3,
+                     slidesPerView: 2,
                      grid: {
                          rows: 1,
                          fill: 'row',
@@ -36,11 +36,11 @@
            >
              <SwiperSlide v-for="(n,index) in 13" :key="n">
               <a href="#">
-                <div :class="index === 2 ? 'border-[#CF6F7A]' : 'border-[#E6E6E6]'" class="rounded-[5px] border border-[1px]  pt-[16px] pb-[24px] gap-[16px] flex flex-col">
+                <div class="rounded-[5px] border border-[1px]  pt-[16px] pb-[24px] gap-[16px] flex flex-col hover">
                   <div>
                     <img src="/cleansers.jpg" class="w-full" alt="">
                   </div>
-                  <span class="font-[500] lg:text-[18px] text-[10px]  text-center" :class="index === 2 ? 'text-[#CF6F7A]' : ''">Cleansers</span>
+                  <span class="font-[500] lg:text-[18px] text-[10px]  text-center hoverText">Cleansers</span>
                 </div>
               </a>
              </SwiperSlide>

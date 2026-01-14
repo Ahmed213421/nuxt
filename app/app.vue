@@ -11,3 +11,23 @@
     </NuxtLayout>
   </div>
 </template>
+
+<script setup>
+import { watchEffect } from 'vue'
+
+const { locale } = useI18n()
+
+watchEffect(() => {
+  if (process.client) {
+    document.documentElement.setAttribute(
+      'dir',
+      locale.value === 'ar' ? 'rtl' : 'ltr'
+    )
+
+    document.documentElement.setAttribute(
+      'lang',
+      locale.value
+    )
+  }
+})
+</script>

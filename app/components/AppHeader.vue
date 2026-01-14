@@ -16,7 +16,7 @@
                 <input 
                     type="text" 
                     class="block xl:w-[327px] xl:w-[250px] lg:w-[200px] w-[150px] border border-[1.5px] border-[#CF6F7A] pl-10 pr-[16px] py-[14px] rounded-[12px] leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
-                    placeholder="Search..."
+                    :placeholder="`${$t('search')}...`"
                 >
 
                 
@@ -40,10 +40,19 @@
 
                 <div class="absolute top-5 right-0 z-20 hidden w-48 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 group-focus-within:block">
                     <div class="py-1">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">English</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Arabic</a>
+                  <NuxtLink
+                    :to="switchLocalePath('en')"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                  >
+                    {{ $t('english') }}
+                  </NuxtLink>                    
+                  <NuxtLink
+                    :to="switchLocalePath('ar')"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                  >
+                    {{ $t('arabic') }}
+                  </NuxtLink>
                     <div class="border-t border-gray-100 my-1"></div>
-                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">Reset</a>
                     </div>
                 </div>
 
@@ -64,13 +73,11 @@
                 </div>
             </div>
 
-            <div class="flex gap-[12px]">
-                <div>
-                    <a href="#" class="border rounded-[12px] bg-[#CF6F7A] py-[13px] px-[19px] text-white">Login</a>
-                </div>
-                <div>
-                    <a href="#" class="border rounded-[12px] border border-[1.5px] border-[#CF6F7A] py-[13px] px-[19px] text-[#CF6F7A]">Register</a>
-                </div>
+            <div class="flex gap-[12px] ">
+              <a href="#" class="border rounded-[12px] whitespace-nowrap bg-[#CF6F7A] py-[13px] px-[19px] text-white">{{$t('login')}}</a>
+              
+                <a href="#" class="border whitespace-nowrap rounded-[12px] border-[1.5px] border-[#CF6F7A] py-[13px] px-[19px] text-[#CF6F7A]">{{$t('register')}}</a>
+                
             </div>
             <Menu as="div" class="relative inline-block text-left hidden lg:block">
     <!-- 3 dots button -->
@@ -143,6 +150,8 @@ import { ArrowDown } from '@element-plus/icons-vue'
 
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import { EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
+
+const switchLocalePath = useSwitchLocalePath()
 
 
 const input1 = ref('');

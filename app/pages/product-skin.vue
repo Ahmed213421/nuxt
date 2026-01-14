@@ -3,9 +3,9 @@
     <div class="container mx-auto py-5 px-6">
 
             <el-breadcrumb :separator-icon="ArrowRight">
-                <el-breadcrumb-item  :to="{ path: '/product-skin' }">Products</el-breadcrumb-item>
-                <el-breadcrumb-item>Product Details</el-breadcrumb-item>
-                <el-breadcrumb-item><span :class="route.path === '/product-skin' ? 'text-[#C65C6A]' : ''">Skincare</span></el-breadcrumb-item>
+                <el-breadcrumb-item  :to="{ path: '/products' }">{{$t('products')}}</el-breadcrumb-item>
+                <el-breadcrumb-item>{{$t('productDetails')}}</el-breadcrumb-item>
+                <el-breadcrumb-item><span :class="route.path === '/product-skin' ? 'text-[#C65C6A]' : ''">{{$t('sensitiveSkin')}}</span></el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         
@@ -16,13 +16,13 @@
                 <el-collapse v-model="activeNames">
                     <el-collapse-item :name="!isMobile ? '5' : ''">
                         <template #title>
-                            <span class="font-[500] text-[20px]">Filter</span>
+                            <span class="font-[500] text-[20px] ">{{$t('filter')}}</span>
                         </template>
                 <div class="demo-collapse">
                     <el-collapse v-model="activeNames">
                     <el-collapse-item name="1">
                         <template #title>
-                            <span class="font-[500] text-[20px]">All Categories</span>
+                            <span class="font-[500] text-[20px]">{{$t('allCategories')}}</span>
                         </template>
                         <div class="flex gap-[5px] items-center">
                             <el-checkbox v-model="checked1" label="Option 2" size="large" />
@@ -57,20 +57,20 @@
                     <el-collapse v-model="activeNames">
                     <el-collapse-item name="2">
                         <template #title>
-                            <span class="font-[500] text-[20px]">Price</span>
+                            <span class="font-[500] text-[20px]">{{$t('price')}}</span>
                         </template>
                         <div class="slider-demo-block pt-5">
                                 <el-slider v-model="value" range  show-stops :max="10" />
                             </div>
                             <div class="pb-5">
-                                <span class="font-[400] text-[14px] text-[#1A1A1A]">Price:</span>  <span>{{ value[0] }} - {{ value[1] }}</span>
+                                <span class="font-[400] text-[14px] text-[#1A1A1A]">{{$t('price')}}:</span>  <span>{{ value[0] }} - {{ value[1] }}</span>
                             </div>
                         </el-collapse-item>
                     </el-collapse>
                     <el-collapse v-model="activeNames">
                     <el-collapse-item name="3">
                         <template #title>
-                            <span class="font-[500] text-[20px]">Rating</span>
+                            <span class="font-[500] text-[20px]">{{$t('rating')}}</span>
                         </template>
                         <div class="flex gap-[8px] items-center">
                             <el-checkbox v-model="fiveStars"  size="large" />
@@ -117,41 +117,41 @@
                     <el-collapse v-model="activeNames">
                     <el-collapse-item name="4">
                         <template #title>
-                            <span class="font-[500] text-[20px]">Popular Tag</span>
+                            <span class="font-[500] text-[20px]">{{$t('popularTag')}}</span>
                         </template>
                         <div class="flex flex-wrap gap-[8px] items-center mt-3">
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                            ترطيب
+                            {{$t('moisturizing')}}
                             </a>
                             <a href="#" class="text-sm bg-[#C65C6A] text-[#F2F2F2] text-[14px] font-[400] rounded-full py-[6px] px-[16px]">
-                                تجميل
+                                {{$t('natural')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                            للبشره الحساسه
+                            {{$t('sensitiveSkin')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                طبيعي
+                                {{$t('brightening')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                توحيد لون البشرة
+                                {{$t('skinToneCorrection')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                تفتيح
+                                {{$t('acneRepair')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                إصلاح البشرة التالفة
+                                {{$t('antiAging')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                شد البشرة
+                                {{$t('longLasting')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                بشرة صحية
+                                {{$t('healthySkin')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                طويل الثبات
+                                {{$t('lightCoverage')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                كونسيلر
+                                {{$t('concealer')}}
                             </a>
                             <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
                                 تغطية خفيفة
@@ -160,15 +160,15 @@
                         </el-collapse-item>
                     </el-collapse>
                        
-                        <div class="w-full h-[295px] md:pt-4 !bg-cover flex items-center justify-center md:block" style="background: url('/productShopNow.jpg');">
+                        <div class="w-full h-[295px] md:pt-4 !bg-cover flex items-center justify-center md:block hover" style="background: url('/productShopNow.jpg');">
                             <div class="text-center">
                                 <div>
                                     <span class="font-[600] text-[32px] text-orange-500">79%</span>
-                                    <span class="font-[400] text-[24px] text-[#1A1A1A]">Discount</span>
+                                    <span class="font-[400] text-[24px] text-[#1A1A1A]">{{$t('discount')}}</span>
                                 </div>
-                                <div class="font-[400] text-[16px] text-[#4D4D4D]">on your first order</div>
+                                <div class="font-[400] text-[16px] text-[#4D4D4D]">{{$t('onYourFirstOrder')}}</div>
                                 <div class="flex items-center justify-center gap-[12px]">
-                                    <span class="font-[600] text-[#000000] text-[16px]">Shop Now</span>
+                                    <span class="font-[600] text-[#000000] text-[16px]">{{$t('hero.cta')}}</span>
                                     <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M15.75 6.7749H0.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M9.7002 0.75L15.7502 6.774L9.7002 12.799" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -179,9 +179,9 @@
                         </div>
 
                         <div class="flex flex-col gap-[12px] pt-[20px]">
-                            <h1 class="font-[500] text-[20px] text-[#1A1A1A]">Sale Products</h1>
-                            <div class="flex flex-col gap-[16px]">
-                                <div class="flex border border-[#E6E6E6] rounded-[6px]">
+                            <h1 class="font-[500] text-[20px] text-[#1A1A1A]">{{$t('saleProducts')}}</h1>
+                            <div class="flex flex-col gap-[16px] ">
+                                <div class="flex border border-[#E6E6E6] saleProducts rounded-[6px]">
                                     <div class="p-5 w-[112px]">
                                         <img src="/cream.png" class="w-[98px] h-[98px]" alt="">
                                     </div>
@@ -199,7 +199,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="flex border border-[#C65C6A] rounded-[6px]">
+                                <div class="flex border saleProducts rounded-[6px]">
                                     <div class="p-5 w-[112px]">
                                         <img src="/stick.png" class="w-[98px] h-[98px]" alt="">
                                     </div>
@@ -216,7 +216,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex border border-[#E6E6E6] rounded-[6px]">
+                                <div class="flex border border-[#E6E6E6] saleProducts rounded-[6px]">
                                     <div class="p-5 w-[112px]">
                                         <img src="/cream2.png" class="w-[98px] h-[98px]" alt="">
                                     </div>
@@ -242,12 +242,12 @@
             </div>
             <div class="col-span-12 md:col-span-7 lg:col-span-8">
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div v-for="(item,index) in paginatedItems" :key="index" class="px-[10px] rounded-[5px] border border-[0.92px] border-[#E6E6E6]  pb-[15px] gap-[16px] flex flex-col relative MostBuyed" :class="index == 2 ? 'border !border-[#CF6F7A]' : ''">
+                    <div v-for="(item,index) in paginatedItems" :key="index" class="px-[10px] rounded-[5px] border border-[0.92px] border-[#E6E6E6] saleProducts pb-[15px] gap-[16px] flex flex-col relative MostBuyed" ">
                         <div :class="index == 5 ? 'block' : 'hidden'" class="save bg-[#EA4B48] text-center py-[2.75px] top-[10px] text-[#FFFFFF] absolute left-[11px] px-[7.33px] rounded-[3.67px] w-[73px] font-[400] text-[12.83px]">
-                            save <span class="discount-number font-[500]">50% </span>
+                            {{$t('save')}} <span class="discount-number font-[500]">50% </span>
                         </div>
                         <div :class="index == 2 ? 'block' : 'hidden'" class="out-of-stock bg-[#1A1A1A] text-center py-[2.75px] top-[10px] text-[#FFFFFF] absolute left-[11px] px-[7.33px] rounded-[3.67px]  font-[400] text-[14px]">
-                            Out Of Stock 
+                            {{$t('outOfStock')}}
                         </div> 
 
                         <div class="flex flex-col absolute gap-[10px] top-[10px] right-[11px] iconsHover">
@@ -279,11 +279,11 @@
                             <div class="flex flex-1 flex-col gap-[5.5px] mt-4">
                                 <div class="flex justify-center md:gap-[7.33px] gap-[3px] text-[#C65C6A] rounded-[11px] items-center py-[2.75px] pl-[3.58px] px-[4.58px] border border-[#C65C6A] border-[1.83px]">
                                     <SvgCart />
-                                    <a href="#" class=" font-[600] xl:text-[12.83px] lg:text-[12px] md:text-[11px] text-[10px]">Add To Cart</a>
+                                    <a href="#" class=" font-[600] xl:text-[12.83px] lg:text-[12px] md:text-[11px] text-[10px]">{{$t('addToCart')}}</a>
                                 </div>
                                 <div class="flex md:gap-[7.33px] gap-[3px] text-[#618EB1]  justify-center rounded-[11px] items-center py-[2.75px] pl-[3.58px] px-[4.58px] border border-[#618EB1] border-[1.83px]">
                                     <SvgBuyNow />
-                                    <a href="#" class=" font-[600] text-[10px]  xl:text-[12.83px] lg:text-[12px] md:text-[11px]">Buy Now</a>
+                                    <a href="#" class=" font-[600] text-[10px]  xl:text-[12.83px] lg:text-[12px] md:text-[11px]">{{$t('buyNow')}}</a>
                                 </div>
                             </div>
                         </div>
@@ -312,6 +312,8 @@ import { useRoute } from 'vue-router'
 import { ArrowRight } from '@element-plus/icons-vue'
 
 const route = useRoute()
+
+const { locale } = useI18n()
 
 
 const checked1 = ref(true)
@@ -376,53 +378,47 @@ onMounted(() => {
   margin-bottom: 16px;
 }
 
-.slider-demo-block {
-  max-width: 350px;
-  display: flex;
-  align-items: center;
-}
-.slider-demo-block .el-slider {
-  margin-top: 0;
-  margin-left: 12px;
-}
+    .slider-demo-block {
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    }
+    .slider-demo-block .el-slider {
+    margin-top: 0;
+    margin-left: 12px;
+    }
 
-:deep(.el-icon) {
-    display: flex !important;
-}
+    :deep(.el-icon) {
+        display: flex !important;
+    }
 
-:deep(.btn-prev),
-:deep(.btn-next) {
-  width: 36px;
-  height: 36px;
-  border-radius: 500px;
-  background: #F2F2F2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-:deep(.el-slider__bar) {
-  background-color: #C65C6A; 
-}
-
-:deep(.el-slider__runway) {
-  background-color: #dcdfe6; 
-}
-
-:deep(.el-slider__button) {
-    border-color: #C65C6A;
-}
-:deep(.is-active.number) {
-    color:#FFFFFF;
-    background: #C65C6A;
+    :deep(.btn-prev),
+    :deep(.btn-next) {
     width: 36px;
     height: 36px;
-    border-radius: 130px;
-}
+    border-radius: 500px;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 
-:deep(.el-checkbox__input.is-checked .el-checkbox__inner){
-    background-color: #C65C6A !important;
-    border-color: #C65C6A !important;
-}
+    :deep(.el-slider__bar) {
+    background-color: #C65C6A; 
+    }
+
+    :deep(.el-slider__runway) {
+    background-color: #dcdfe6; 
+    }
+
+    :deep(.el-slider__button) {
+        border-color: #C65C6A;
+    }
+    
+
+    :deep(.el-checkbox__input.is-checked .el-checkbox__inner){
+        background-color: #C65C6A !important;
+        border-color: #C65C6A !important;
+    }
 
 </style>

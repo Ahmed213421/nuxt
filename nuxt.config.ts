@@ -5,15 +5,26 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', 'nuxt-swiper','@element-plus/nuxt'],
+  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', 'nuxt-swiper', '@element-plus/nuxt', '@nuxtjs/i18n'],
 
   css: [
-    '~/assets/css/first.css',    'primeicons/primeicons.css','swiper/css',
+    '~/assets/css/first.css', 'primeicons/primeicons.css', 'swiper/css',
     'swiper/css/grid',
     'swiper/css/navigation',
-  '@fortawesome/fontawesome-svg-core/styles.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
 
   ],
+
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'ar', name: 'Arabic', file: 'ar.json' }
+    ],
+    defaultLocale: 'en',
+    lazy: true,
+    langDir: 'locales',
+    strategy: 'prefix'
+    },
 
   tailwindcss: {
     exposeConfig: true,

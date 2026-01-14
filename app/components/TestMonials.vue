@@ -4,7 +4,7 @@
          <div class="container mx-auto px-5 xl:px-0">
     <div class="relative testmonials pt-[100px] pb-[50px] mt-[10%] ">
     <div class="absolute top-[10%] xl:left-0 ">
-      <h1 class="mx-auto text-[20px] md:text-[32px] font-[600]">Client Testimonials</h1>
+      <h1 class="mx-auto text-[20px] md:text-[32px] font-[600]">{{$t('clientTestimonials')}}</h1>
     </div>
 
       <!-- External buttons -->

@@ -33,4 +33,43 @@
     cursor: pointer;
 }
 
+.mySwiper .hover:hover,.productDetaials:hover,.saleProducts:hover {
+    border: 1px solid #CF6F7A;
+}
+.mySwiper .hover:hover .hoverText{
+    color: #CF6F7A;
 
+}
+
+html[dir="rtl"] .el-collapse-item__title {
+    text-align: right;
+}
+
+.btn-prev,
+.btn-next {
+    width: 36px;
+    height: 36px;
+    border-radius: 500px;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.is-active.number {
+    color: #FFFFFF !important;
+    background: #C65C6A;
+    width: 36px;
+    height: 36px;
+    border-radius: 130px;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: #C65C6A !important;
+    border-color: #C65C6A !important;
+}
+
+.el-icon {
+    display: flex !important;
+}

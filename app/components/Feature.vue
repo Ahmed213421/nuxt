@@ -22,26 +22,26 @@ const features = [
   {
     id: 1,
     icon: IconsFastShipping,
-    title: 'Free Shipping',
-    description: 'Free shipping on all your order',
+    title: $t('features.freeShippingTitle'),
+    description: $t('features.freeShippingSubtitle'),
   },
   {
     id: 1,
     icon: IconsHeadPhones,
-    title: 'Customer Support 24/7',
-    description: 'Instant access to Support',
+    title: $t('features.supportTitle'),
+    description: $t('features.supportSubtitle'),
   },
   {
     id: 1,
     icon: IconsShoppingBag,
-    title: '100% Secure Payment',
-    description: 'We ensure your money is save',
+    title: $t('features.securePaymentTitle'),
+    description: $t('features.securePaymentSubtitle'),
   },
   {
     id: 1,
     icon: IconsPackage,
-    title: 'Money-Back Guarantee',
-    description: '30 Days Money-Back Guarantee',
+    title: $t('features.moneyBackTitle'),
+    description: $t('features.moneyBackSubtitle'),
   },
 ];
 </script>
