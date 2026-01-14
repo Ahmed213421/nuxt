@@ -34,7 +34,7 @@
                         <path d="M2.22266 7.55554H29.7782V24.4444H2.22266V7.55554Z" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
 
-                    AR
+                    {{ locale === 'ar' ? 'AR' : 'EN' }}
                     <SvgDropDown/>
                 </button>
 
@@ -147,6 +147,8 @@ import { ref } from 'vue'
 import { Search } from '@element-plus/icons-vue';
 import { ArrowDown } from '@element-plus/icons-vue'
 // import Dropdown from 'primevue/dropdown';
+const { locale } = useI18n()
+
 
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import { EllipsisVerticalIcon } from '@heroicons/vue/24/solid'

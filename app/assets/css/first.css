@@ -45,17 +45,6 @@ html[dir="rtl"] .el-collapse-item__title {
     text-align: right;
 }
 
-.btn-prev,
-.btn-next {
-    width: 36px;
-    height: 36px;
-    border-radius: 500px;
-    background: #F2F2F2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .is-active.number {
     color: #FFFFFF !important;

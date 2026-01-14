@@ -30,9 +30,11 @@
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex lg:gap-[38px] text-sm">
                 <NuxtLink to="/" class="w-[80px] text-sm font-medium text-black">
-                <span class=" border-b-2 border-[#CF6F7A]">{{$t('home')}}</span>
+                <span :class="route.path === '/en' || route.path === '/ar' ? ' border-b-2 border-[#CF6F7A]' : ''">{{$t('home')}}</span>
               </NuxtLink>
-              <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('products')}}</span></a>
+                <NuxtLink to="/products" class="w-[80px] text-sm font-medium text-black">
+                <span :class="route.path === '/en/products' || route.path === '/ar/products' ? ' border-b-2 border-[#CF6F7A]' : ''">{{$t('products')}}</span>
+              </NuxtLink>
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('offers')}}</span></a>
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('aboutUs')}}</span></a>
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('categories')}}</span></a>
@@ -57,6 +59,7 @@
 
 <script setup>
 import { ref } from 'vue'
+const route = useRoute()
 
 const { locale } = useI18n()
 const mobileOpen = ref(false)

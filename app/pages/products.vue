@@ -78,9 +78,9 @@
 
         </div>
         <div class="border border-[#F0A0A0] mt-4" v-if="categoryValue || priceValue || ratingValue !== null">
-          <div class="container mx-auto lg:px-[300px] px-[200px] py-[16px]">
-            <div class="flex">
-              <div class="flex gap-[24px]">
+          <div class="container mx-auto lg:px-[300px] px-[100px] py-[16px]">
+            <div class="flex md:justify-between flex-col md:flex-row">
+              <div class="flex gap-[24px] flex-col md:flex-row items-center">
                 <p class="text-[#808080] font-[400] text-[14px] whitespace-nowrap">{{$t('activeFilters')}}:</p>
                 <div class="flex gap-[8px] items-center" v-if="categoryValue !== null">
                   <p class="font-[500] text-[#1A1A1A] text-[14px]">{{categoryValue}} </p>
@@ -112,6 +112,9 @@
                     
                   </p>
                 </div>
+              </div>
+              <div class="text-center mt-3 md:mt-0 font-[400] text-[14px] text-[#808080]">
+                <span class="font-[500] text-[#1A1A1A]">2,547</span> Results found.
               </div>
             </div>
           </div>
@@ -182,6 +185,17 @@
 </template>
 
 <style scoped>
+  :deep(.btn-prev),
+    :deep(.btn-next) {
+    width: 36px;
+    height: 36px;
+    border-radius: 500px;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
 :deep(.el-select__wrapper.el-tooltip__trigger.el-tooltip__trigger){
     border:1px solid #F0A0A0;
     border-radius: 4px;
@@ -194,8 +208,8 @@ import { ref } from 'vue'
 const categoryValue = ref(null)
 const ratingValue = ref(null)
 const priceValue = ref(null)
-const sortingValue = ref(null)
-const showValue = ref(null)
+const showValue = ref(16)
+const sortingValue = ref('')
 
 const categories = [
   {

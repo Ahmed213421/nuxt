@@ -91,6 +91,7 @@
       "category" : "تختار تصنيف",
       "price" : "اختار سعر",
       "rating": "اختار التصنيف",
+      "sortBy" : "الترتيب حسب",
   "sortByPlaceholder": "الترتيب حسب {value}",
   "oldest":"الاقدم",
   "latest": "الاحدث",
