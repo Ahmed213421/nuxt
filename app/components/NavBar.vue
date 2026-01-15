@@ -32,9 +32,10 @@
                 <NuxtLink to="/" class="w-[80px] text-sm font-medium text-black">
                 <span :class="route.path === '/en' || route.path === '/ar' ? ' border-b-2 border-[#CF6F7A]' : ''">{{$t('home')}}</span>
               </NuxtLink>
-                <NuxtLink to="/products" class="w-[80px] text-sm font-medium text-black">
+                <NuxtLink :to="localePath('/products')" class="w-[80px] text-sm font-medium text-black">
                 <span :class="route.path === '/en/products' || route.path === '/ar/products' ? ' border-b-2 border-[#CF6F7A]' : ''">{{$t('products')}}</span>
               </NuxtLink>
+              
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('offers')}}</span></a>
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('aboutUs')}}</span></a>
               <a class="w-[80px] text-sm font-medium text-black" href="#"><span>{{$t('categories')}}</span></a>
@@ -48,10 +49,16 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="sm:hidden" v-show="mobileOpen">
       <div class="space-y-1 px-2 pb-3 pt-2">
-        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black">الرئيسيه</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black">المنتجات</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black">العروض</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black">تواصل معنا</a>
+        <NuxtLink to="/" class="block rounded-md px-3 py-2 text-base font-medium text-black ">
+                <span :class="route.path === '/en' || route.path === '/ar' ? ' border-b-2 border-[#CF6F7A]' : ''" class="">{{$t('home')}}</span>
+              </NuxtLink>
+        <NuxtLink :to="localePath('/products')" class="block rounded-md px-3 py-2 text-base font-medium text-black ">
+                <span :class="route.path === '/en/products' || route.path === '/ar/products' ? ' border-b-2 border-[#CF6F7A]' : ''" class="">{{$t('products')}}</span>
+              </NuxtLink>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black">{{$t('offers')}}</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black">{{$t('aboutUs')}}</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black">{{$t('categories')}}</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-black">{{$t('contactUs')}}</a>
       </div>
     </div>
   </nav>
@@ -59,8 +66,10 @@
 
 <script setup>
 import { ref } from 'vue'
-const route = useRoute()
-
 const { locale } = useI18n()
+const route = useRoute()
+const localePath = useLocalePath()
+
+
 const mobileOpen = ref(false)
 </script>

@@ -18,7 +18,7 @@
     <div class="container mx-auto">
       <div class="flex justify-between mx-auto">
         <div class="latest font-[500] lg:text-[24px] "><span :class="locale === 'ar' ?'xl:after:right-0 after:right-0' : 'xl:after:left-0 after:left-0'" class="after:content-[''] relative after:absolute  after:bottom-[-6px] after:w-[110.94px] after:h-[2.75px] after:bg-[#C65C6A]  xl:ml-0">{{$t('latest')}}</span></div>
-        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">{{$t('viewAll')}} <SvgRightArrow /></a>
+        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">{{$t('viewAll')}} <SvgRightArrow class="rightArw"/></a>
       </div>
     </div>
 
@@ -29,9 +29,9 @@
   <div class="models mt-[50px] p-5 xl:p-0">
     <div class="container mx-auto">
       <div class="flex justify-between mx-auto">
-                <div class="latest font-[500] lg:text-[24px] "><span :class="locale === 'ar' ?'xl:after:right-0 after:right-0' : 'xl:after:left-0 after:left-0'" class="after:content-[''] relative after:absolute after:bottom-[-6px] after:w-[160.94px] after:h-[2.75px] after:bg-[#C65C6A] xl:ml-0">{{$t('mostBuyed')}}</span></div>
+                <div class="latest font-[500] lg:text-[24px] "><span :class="locale === 'ar' ?'xl:after:right-0 after:right-0' : 'xl:after:left-0 after:left-0'" class="after:content-[''] relative after:absolute after:bottom-[-6px] after:w-[110.94px] after:h-[2.75px] after:bg-[#C65C6A] xl:ml-0">{{$t('mostBuyed')}}</span></div>
 
-        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">{{$t('viewAll')}} <SvgRightArrow /></a>
+        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">{{$t('viewAll')}} <SvgRightArrow class="rightArw"/></a>
       </div>
     </div>
 
@@ -43,9 +43,9 @@
   <div class="models mt-[50px] p-5 xl:p-0">
     <div class="container mx-auto">
       <div class="flex justify-between mx-auto">
-                <div class="latest font-[500] lg:text-[24px] "><span :class="locale === 'ar' ?'xl:after:right-0 after:right-0' : 'xl:after:left-0 after:left-0'" class="after:content-[''] relative after:absolute xl after:bottom-[-6px] after:w-[200.94px] after:h-[2.75px] after:bg-[#C65C6A] xl:ml-0">{{$t('mostCommon')}}</span></div>
+                <div class="latest font-[500] lg:text-[24px] "><span :class="locale === 'ar' ?'xl:after:right-0 after:right-0' : 'xl:after:left-0 after:left-0'" class="after:content-[''] relative after:absolute xl after:bottom-[-6px] after:w-[110.94px] after:h-[2.75px] after:bg-[#C65C6A] xl:ml-0">{{$t('mostCommon')}}</span></div>
 
-        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">{{$t('viewAll')}} <SvgRightArrow /></a>
+        <a href="#" class="view-all text-[#C65C6A] flex items-center gap-[11px]">{{$t('viewAll')}} <SvgRightArrow class="rightArw"/></a>
       </div>
     </div>
 
@@ -74,6 +74,7 @@
 </style>
 
 <script setup>
+  import { onBeforeMount } from 'vue'
   
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { ref } from 'vue'
@@ -82,7 +83,15 @@ import { Grid, Navigation,Pagination } from 'swiper/modules'
 const modules = [Grid, Navigation, Pagination]
 const { locale } = useI18n()
 
+const { open, close } = useLoader()
 
+onBeforeMount(async () => {
+  open('Fetching data...')
+  try {
+  } finally {
+    close()
+  }
+})
 
 
 const containerRef = ref(null)

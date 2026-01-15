@@ -2,7 +2,7 @@
     <div class=" border-b border-[#246062] hidden md:block">
 
     <header class="flex container p-2 xl:p-0 mx-auto justify-between items-center">
-        <div class="flex">
+        <div class="flex hidden xl:block">
             <SvgIconHeader />
         </div>
         <div class="py-[23px] h-[44px] items-center  flex gap-[24px]">

@@ -3,14 +3,14 @@
        <div class="bg-[#F2F2F2]">
          <div class="container mx-auto px-5 xl:px-0">
     <div class="relative testmonials pt-[100px] pb-[50px] mt-[10%] ">
-    <div class="absolute top-[10%] xl:left-0 ">
+    <div class="absolute top-[10%] " :class="locale === 'ar' ? 'xl:right-0 ' : 'xl:left-0 '">
       <h1 class="mx-auto text-[20px] md:text-[32px] font-[600]">{{$t('clientTestimonials')}}</h1>
     </div>
 
       <!-- External buttons -->
       <div class="flex justify-end gap-4 mb-4">
-        <button ref="prevEl" class="nav-btn w-[45px] bg-white h-[45px] 2xl:right-[4%] absolute xl:right-[5%] md:right-[8%] lg:right-[6%] right-[19%]  top-[10%]  rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center"><SvgLeftArrow /></button>
-        <button ref="nextEl" class="nav-btn w-[45px] h-[45px] absolute xl:right-[0%] top-[10%]  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A] bg-[#C65C6A]">
+        <button ref="prevEl" :class="locale === 'ar' ? '2xl:left-[4%] xl:left-[5%]  md:left-[8%] lg:left-[6%] left-[19%] ' : '2xl:right-[4%] xl:right-[5%]  md:right-[8%] lg:right-[6%] right-[19%]'" class="nav-btn w-[45px] bg-white h-[45px]  absolute  top-[10%]  rounded-[500px] p-2 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center btn-next"><SvgLeftArrow /></button>
+        <button ref="nextEl" :class="locale === 'ar' ? 'xl:left-[0%]' : 'xl:right-[0%]'" class="nav-btn w-[45px] h-[45px] absolute  top-[10%]  rounded-[500px] p-1 w-6 h-6 md:w-12 md:h-12 flex justify-center items-center border-2 border-[#C65C6A] bg-[#C65C6A] btn-next">
           <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.75 6.7749H0.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M9.7002 0.75L15.7502 6.774L9.7002 12.799" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -81,6 +81,8 @@
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Grid, Navigation } from 'swiper/modules'
+
+const { locale } = useI18n()
 
 const prevEl = ref(null)
 const nextEl = ref(null)

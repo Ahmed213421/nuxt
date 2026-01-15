@@ -1,5 +1,6 @@
 <template>
     <div class="bg-[#F2F4F5]">
+             <ViewDialog v-model="dialogVisible"/>  
     <div class="container mx-auto py-5 px-6">
 
             <el-breadcrumb :separator-icon="ArrowRight">
@@ -120,41 +121,41 @@
                             <span class="font-[500] text-[20px]">{{$t('popularTag')}}</span>
                         </template>
                         <div class="flex flex-wrap gap-[8px] items-center mt-3">
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                             {{$t('moisturizing')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#C65C6A] text-[#F2F2F2] text-[14px] font-[400] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('natural')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                             {{$t('sensitiveSkin')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('brightening')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('skinToneCorrection')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('acneRepair')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('antiAging')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('longLasting')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('healthySkin')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('lightCoverage')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
                                 {{$t('concealer')}}
                             </a>
-                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] text-[#1A1A1A] rounded-full py-[6px] px-[16px]">
-                                تغطية خفيفة
+                            <a href="#" class="text-sm bg-[#F2F2F2] text-[14px] font-[400] hover:bg-[#C65C6A] text-[#1A1A1A] hover:text-[#F2F2F2] rounded-full py-[6px] px-[16px]">
+                                {{$t('lightCoverage')}}
                             </a>
                         </div>
                         </el-collapse-item>
@@ -169,7 +170,7 @@
                                 <div class="font-[400] text-[16px] text-[#4D4D4D]">{{$t('onYourFirstOrder')}}</div>
                                 <div class="flex items-center justify-center gap-[12px]">
                                     <span class="font-[600] text-[#000000] text-[16px]">{{$t('hero.cta')}}</span>
-                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="rightArw">
                                         <path d="M15.75 6.7749H0.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M9.7002 0.75L15.7502 6.774L9.7002 12.799" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -254,9 +255,12 @@
                             <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
                                 <SvgLike />
                             </div>
-                            <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
+                            <el-button plain @click="dialogVisible = true" class="border border-[0.92px] !w-[36.65px] !h-[36.65px] !rounded-[50%] !flex !justify-center !items-center !border-[#C65C6A]">
+
+                            
                                 <SvgViewItem />
-                            </div>
+                            </el-button>
+                            
                         </div>
                         <div>
                             <img src="/Productmage.png" alt="">
@@ -304,7 +308,7 @@
 </template>
 <script setup lang="ts">
 
-import { ref,computed,onMounted } from 'vue'
+import { ref,computed,onBeforeMount,onMounted } from 'vue'
 
 import type { CollapseModelValue } from 'element-plus'
 import { useRoute } from 'vue-router'
@@ -313,9 +317,19 @@ import { ArrowRight } from '@element-plus/icons-vue'
 
 const route = useRoute()
 
+const dialogVisible = ref(false)
+
 const { locale } = useI18n()
 
+const { open, close } = useLoader()
 
+onBeforeMount(async () => {
+  open('Fetching data...')
+  try {
+  } finally {
+    close()
+  }
+})
 const checked1 = ref(true)
 const checked2 = ref(false)
 const checked3 = ref(false)

@@ -1,7 +1,9 @@
 <template>
     <div>
+         <ViewDialog v-model="dialogVisible"/>
         <div class="container mx-auto p-5 xl:p-0">
             <div class="flex lg:justify-between">
+              <Loader />
                 
                 <div class="flex flex-wrap gap-4 items-center">
                     <el-select
@@ -114,7 +116,7 @@
                 </div>
               </div>
               <div class="text-center mt-3 md:mt-0 font-[400] text-[14px] text-[#808080]">
-                <span class="font-[500] text-[#1A1A1A]">2,547</span> Results found.
+                <span class="font-[500] text-[#1A1A1A]">2,547</span> {{$t('resultsFound')}}.
               </div>
             </div>
           </div>
@@ -132,13 +134,16 @@
                         </div> 
 
                         <div class="flex flex-col absolute gap-[10px] top-[10px] right-[11px] iconsHover">
-                            <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
-                                <SvgLike />
-                            </div>
-                            <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
-                                <SvgViewItem />
-                            </div>
-                        </div>
+                          <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
+                              <SvgLike />
+                          </div>
+                          <el-button plain @click="dialogVisible = true" class="border border-[0.92px] !w-[36.65px] !h-[36.65px] !rounded-[50%] !flex !justify-center !items-center !border-[#C65C6A]">
+
+                            
+                              <SvgViewItem />
+                          </el-button>
+                          
+                      </div>
                         <div>
                             <img src="/Productmage.png" alt="">
                         </div>
@@ -203,7 +208,11 @@
 </style>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { onBeforeMount, computed, ref } from 'vue'
+
+
+const dialogVisible = ref(false)
+
 
 const categoryValue = ref(null)
 const ratingValue = ref(null)
@@ -253,6 +262,16 @@ const showValues = [
     label: '32',
   },
 ]
+
+const { open, close } = useLoader()
+
+onBeforeMount(async () => {
+  open('Fetching data...')
+  try {
+  } finally {
+    close()
+  }
+})
 
 const prices = [
   {
@@ -312,5 +331,6 @@ const paginatedItems = computed(() => {
 const onPageChange = (page: number) => {
   currentPage.value = page
 }
+
 
 </script>

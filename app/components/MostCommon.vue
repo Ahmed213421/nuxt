@@ -1,6 +1,7 @@
 <template>
      <ClientOnly>
        <div class="relative">
+         <ViewDialog v-model="dialogVisible"/>
          <div class="container mx-auto">
 
       <!-- External buttons -->
@@ -52,9 +53,12 @@
                 <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
                     <SvgLike />
                 </div>
-                <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
+                <el-button plain @click="dialogVisible = true" class="border border-[0.92px] !w-[36.65px] !h-[36.65px] !rounded-[50%] !flex !justify-center !items-center !border-[#C65C6A]">
+
+                  
                     <SvgViewItem />
-                </div>
+                </el-button>
+                
             </div>
             <div>
                 <img src="/ImgSliderBuyed1.png" class="w-full" alt="">
@@ -101,6 +105,8 @@ import { Grid, Navigation } from 'swiper/modules'
 
 const prevEl = ref(null)
 const nextEl = ref(null)
+
+const dialogVisible = ref(false)
 
 const onSwiper = (swiper) => {
   swiper.params.navigation.prevEl = prevEl.value

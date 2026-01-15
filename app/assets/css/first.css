@@ -29,6 +29,14 @@
     display: flex;
 }
 
+.el-button.is-plain:hover,
+.el-button.is-plain:focus {
+    background-color: white !important;
+    /* border-color: #C65C6A !important; */
+    color: #fff !important;
+}
+
+
 .iconsHover>div {
     cursor: pointer;
 }
@@ -43,6 +51,14 @@
 
 html[dir="rtl"] .el-collapse-item__title {
     text-align: right;
+}
+
+html[dir="rtl"] .btn-prev,html[dir="rtl"] .btn-next{
+    transform: rotate(180deg);
+}
+
+html[dir="rtl"] .rightArw{
+    transform: rotate(180deg);
 }
 
 
