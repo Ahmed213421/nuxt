@@ -105,6 +105,9 @@
   "show" : "Show"
 
     },
-    "resultsFound" : "Results found"
+    "resultsFound" : "Results found",
+
+    "relatedProduct" : "Related Product",
+    "productReviews" : "Product Reviews"
 
 }

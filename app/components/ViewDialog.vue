@@ -11,7 +11,6 @@
                 
      <ClientOnly>
        <div class="relative py-5">
-        <ViewDialog v-model="dialogVisible"/>
          <div class="container mx-auto">
 
       <!-- External buttons -->

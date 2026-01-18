@@ -78,3 +78,18 @@ html[dir="rtl"] .rightArw{
 .el-icon {
     display: flex !important;
 }
+
+
+
+.ratingAudience>div:nth-child(4n+1),
+.ratingAudience>div:nth-child(4n+2),
+.ratingAudience>div:nth-child(4n+3) {
+    padding: 0 16px 16px 0px;
+    border-bottom: 0.5px dashed #A3A3A3;
+}
+
+.ratingAudience>div:nth-child(4n) {
+    border-bottom: none;
+    padding-bottom: 3px;
+    padding: 0 16px 16px 0px;
+}
