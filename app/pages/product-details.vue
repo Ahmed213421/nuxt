@@ -54,9 +54,9 @@
         @swiper="onSwiper"
         class="mySwiper relative h-[400px]"
       >
-        <SwiperSlide v-for="(n,index) in 13" :key="n">
+        <SwiperSlide v-for="(n,index) in images" :key="n">
           <div class="w-[80px] flex justify-center items-center h-[80px] border border-[#C4C4C4]">
-            <img src="/cream.png" class="w-[w-47px] h-[70px]" alt="">
+            <img :src="n" @click="setImage(n)" class="w-[w-47px] h-[70px]" alt="">
           </div>
         </SwiperSlide>
       </Swiper>
@@ -66,7 +66,7 @@
   </ClientOnly>
 
   <div class="w-[289px] h-[423px] py-[50px]">
-    <img src="/cream.png"  class="h-[380px]" alt="" srcset="">
+    <img :src="src"  class="h-[380px]" alt="" srcset="">
   </div>
               </div>
             </div>
@@ -301,7 +301,7 @@
       </div>
    
       
-  <div class="grid grid-cols-12 gap-10 mx-10 xl:w-[85%] mx-auto ">
+  <div class="grid grid-cols-12 gap-[10px] md:gap-10  mx-10 xl:w-[85%] mx-auto ">
             <div class="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-3 border-dashed border-[#B8B8B8] rounded-[8px] border-[0.8px]">
                 <el-collapse v-model="activeNames" >
                     <el-collapse-item :name="!isMobile ? '5' : ''">
@@ -474,8 +474,14 @@ const activeNames = ref(['1','2','3','4','5','6'])
 
 const dialogVisible = ref(false)
 
+const src = ref('/cream.png')
 
-// import BuyNow from './svg/BuyNow.vue';
+const images = ref(['/cream.png','/cream2.png', '/cream.png', '/cream2.png', '/cream.png', '/cream2.png'])
+
+const setImage = (img) => {
+  src.value = img
+}
+
 
 const value = ref(5.4)
 

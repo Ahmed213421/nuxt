@@ -15,7 +15,7 @@
           <span class="text-[15px] md:text-[20px] font-[500]">{{ $t('hero.saleUpTo') }} <span class="text-[10px] md:text-[20px] font-[600] bg-[#FF8A00] rounded-[5px] py-[2px] md:py-[4px] px-[6px] md:px-[12px]"> {{ $t('hero.discount') }}</span></span>
           <span class="text-[12px] md:text-[14px] font-[400]">{{ $t('hero.freeShipping') }}</span>
         </div>
-        <a href="#" class="flex items-center w-[100px] justify-between md:w-[191px] font-[600] text-[12px] md:text-[16px] text-[#C65C6A] bg-[#FFFFFF] md:gap-[12px] gap-[5px] rounded-[53px] py-[5px] md:py-[16px] px-[10px] md:px-[40px]">{{ $t('hero.cta') }} <SvgRightArrow/></a>
+        <a href="#" class="flex items-center w-[100px] justify-between md:w-[191px] font-[600] text-[12px] md:text-[16px] text-[#C65C6A] bg-[#FFFFFF] md:gap-[12px] gap-[5px] rounded-[53px] py-[5px] md:py-[16px] px-[10px] md:px-[40px]">{{ $t('hero.cta') }} <SvgRightArrow class="rightArw"/></a>
       </div>
       </swiper-slide>
     </swiper-container>

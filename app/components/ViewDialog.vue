@@ -19,6 +19,7 @@
         <button ref="nextEl" class="nav-btn z-10 absolute  lg:bottom-[-4%] bottom-0 left-8 md:left-5 md:right-4 md:w-12 md:h-12 flex justify-center items-center "><SvgArrowBottom /></button>
       </div>
 
+      
       <Swiper
     direction="vertical"
     :slides-per-view="1"
@@ -55,19 +56,20 @@
         @swiper="onSwiper"
         class="mySwiper relative h-[400px]"
       >
-        <SwiperSlide v-for="(n,index) in 13" :key="n">
-          <div class="w-[80px] flex justify-center items-center h-[80px] border border-[#C4C4C4]">
-            <img src="/cream.png" class="w-[w-47px] h-[70px]" alt="">
+        <SwiperSlide v-for="(src,index) in images" :key="n">
+          <div @click="setImage(src)" class="w-[80px] flex gallery-thumbnails justify-center items-center h-[80px] border border-[#C4C4C4]">
+            <img :src="src"  class="w-[w-47px] h-[70px]" alt="">
           </div>
         </SwiperSlide>
       </Swiper>
+      
 
     </div>
     </div>
   </ClientOnly>
 
-  <div class="w-[289px] h-[423px]">
-    <img src="/cream.png"  class="h-[380px]" alt="" srcset="">
+  <div class="w-[289px]  gallery-preview h-[423px]">
+    <img :src="selectedImage"  class="h-[380px]" alt="" srcset="">
   </div>
               </div>
             </div>
@@ -208,6 +210,9 @@ const props = defineProps({
 })
 
 
+const selectedImage = ref('/cream.png')
+const setImage = (src) => { selectedImage.value = src }
+
 
 const count = ref(0);
 
@@ -218,9 +223,19 @@ const visible = computed({
   set: (val) => emit('update:modelValue', val),
 })
 
+const onSwiper = (swiper) => {
+  swiper.params.navigation.prevEl = prevEl.value
+  swiper.params.navigation.nextEl = nextEl.value
+  swiper.navigation.init()
+  swiper.navigation.update()
+}
+
 const close = () => {
   emit('update:modelValue', false)
 }
+
+const images = ref(['/cream.png','/bgSale.jpg','/cream.png','/bgSale.jpg','/cream.png','/bgSale.jpg',])
+
 
 
 const isMobile = ref(false)

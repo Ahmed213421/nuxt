@@ -61,6 +61,12 @@ html[dir="rtl"] .rightArw{
     transform: rotate(180deg);
 }
 
+html[dir="rtl"] .el-dialog__headerbtn{
+    right:15px !important;
+}
+.el-dialog__headerbtn{
+    right:-15px !important;
+}
 
 .is-active.number {
     color: #FFFFFF !important;
@@ -92,4 +98,18 @@ html[dir="rtl"] .rightArw{
     border-bottom: none;
     padding-bottom: 3px;
     padding: 0 16px 16px 0px;
+}
+
+.activeSideBar{
+    background: #C65C6A;
+    color:#FFFFFF;
+}
+.activeSideBarHome{
+    background: #C65C6A;
+    color:#FFFFFF;
+}
+
+.dashboard-svg{
+    fill: white;
+    stroke: black;
 }
