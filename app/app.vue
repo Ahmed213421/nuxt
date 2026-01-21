@@ -7,7 +7,7 @@
       This is an auto-imported component.
     </AppAlert> -->
 
-     <div class="loaderWrapper" ref="loaderWrapper" v-show="showLoader">
+     <div class="loaderWrapper"  v-show="showLoader">
       <div class="loader">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -42,12 +42,11 @@ watchEffect(() => {
   }
 })
 
-const loaderWrapper = ref(null)
 const showLoader = ref(true)
 
 setTimeout(() => {
   showLoader.value = false
-}, 10000)
+}, 5000)
 
 </script>
 <style scoped>
@@ -61,7 +60,7 @@ setTimeout(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeLoader 0.3s 4s ease forwards;
+  animation: fadeLoader 0.3s 8s ease forwards;
 }
 
 .loader {

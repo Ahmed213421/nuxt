@@ -146,7 +146,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
           <div class="px-4 py-6 w-full">
             <Menu as="div" class="relative inline-block text-left w-full">
 

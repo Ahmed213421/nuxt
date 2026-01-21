@@ -263,15 +263,15 @@ const showValues = [
   },
 ]
 
-const { open, close } = useLoader()
+// const { open, close } = useLoader()
 
-onBeforeMount(async () => {
-  open('Fetching data...')
-  try {
-  } finally {
-    close()
-  }
-})
+// onBeforeMount(async () => {
+//   open('Fetching data...')
+//   try {
+//   } finally {
+//     close()
+//   }
+// })
 
 const prices = [
   {
