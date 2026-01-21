@@ -1,4 +1,6 @@
 <template>
+
+
   <ClientOnly>
     <SliderPage />
   </ClientOnly>
@@ -83,15 +85,6 @@ import { Grid, Navigation,Pagination } from 'swiper/modules'
 const modules = [Grid, Navigation, Pagination]
 const { locale } = useI18n()
 
-const { open, close } = useLoader()
-
-onBeforeMount(async () => {
-  open('Fetching data...')
-  try {
-  } finally {
-    close()
-  }
-})
 
 
 const containerRef = ref(null)
