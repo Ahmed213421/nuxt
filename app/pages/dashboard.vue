@@ -46,8 +46,8 @@ onBeforeUnmount(() => {
 
 const menuItems = [
   { label: 'Home', to: '/dashboard',icon:icon1 },
-  { label: 'Order History', to: '/dashboard/index2',icon:icon2 },
-  { label: 'Track Order', to: '/dashboard/cart',icon:icon3 },
+  { label: 'Order History', to: '/dashboard/order-history',icon:icon2 },
+  { label: 'Track Order', to: '/dashboard/order-details',icon:icon3 },
   { label: 'Shopping Cart', to: '/dashboard/wishlist' ,icon:icon4},
   { label: 'Wishlist', to: '/dashboard/compare' ,icon:icon5},
   { label: 'Compare', to: '/dashboard/addresses' ,icon:icon6},

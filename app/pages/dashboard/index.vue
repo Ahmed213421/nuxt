@@ -296,12 +296,12 @@
             </el-table-column>
             <el-table-column prop="date" label="DATE" width="100" />
             <el-table-column prop="total" label="TOTAL" width="150" />
-            <el-table-column prop="action" label="ACTION" width="150">
+            <el-table-column prop="action" label="ACTION" width="200">
               <template #default="{ row }">
-                <div class="font-[600] items-center xl:text-[14px] text-[#3086C8] flex gap-[8px]">
-                  <span>{{ row.action }}</span>
-                  <SvgRightArrowTable class="rightArw" />
-                </div>
+                 <NuxtLink :to="localePath('/dashboard/order-details')" class="font-[600] items-center xl:text-[14px] text-[#3086C8] flex gap-[8px]">
+                     <span>{{ row.action }}</span>
+                     <SvgRightArrowTable class="rightArw" />
+                  </NuxtLink>
               </template>
             </el-table-column>
             <el-table-column prop="date" label="" width="150" />
@@ -517,6 +517,9 @@ const onSwiper = (swiper) => {
   swiper.navigation.init()
   swiper.navigation.update()
 }
+
+
+const localePath = useLocalePath()
 
 </script>
 
