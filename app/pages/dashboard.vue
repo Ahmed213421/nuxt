@@ -68,21 +68,36 @@ const isActive = (to) => {
   <div>
     <div class="bg-[#F2F4F5]">
       <div class="container xl:pl-[12%] mx-auto py-5 px-6">
-        
+
         <el-breadcrumb :separator-icon="ArrowRight" class="flex items-center">
           <el-breadcrumb-item :to="{ path: '/dashboard' }">
             <div class="flex items-center gap-[4px]">
               <SvgHome /> <span>
-                 {{ $t('Home') }}
+                {{ $t('Home') }}
               </span>
             </div>
           </el-breadcrumb-item>
           <el-breadcrumb-item>{{ $t('User Account') }}</el-breadcrumb-item>
-          <el-breadcrumb-item><span :class="route.path === `/${locale}/dashboard/` || `/${locale}/dashboard` ? 'text-[#C65C6A]' : ''">{{ $t('Dashboard')
-            }}</span></el-breadcrumb-item>
-      </el-breadcrumb>
+          <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/` || route.path == `/${locale}/dashboard` "><span
+              :class="route.path === `/${locale}/dashboard/` || `/${locale}/dashboard` ? 'text-[#C65C6A]' : ''">{{
+                $t('Dashboard')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/order-history/` || route.path == `/${locale}/dashboard/order-history` "><span
+              :class="route.path === `/${locale}/order-history/` || `/${locale}/order-history` ? 'text-[#C65C6A]' : ''">{{
+                $t('Order Hisory')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/order-details/` || route.path == `/${locale}/dashboard/order-details` "><span
+              :class="route.path === `/${locale}/order-details/` || `/${locale}/order-details` ? 'text-[#C65C6A]' : ''">{{
+                $t('Order Detatils')
+              }}</span>
+          </el-breadcrumb-item>
+        </el-breadcrumb>
+        
+      </div>
     </div>
-  </div>
+
   <div class="container mx-auto px-3">
     <div class="flex align-items-center gap-2 py-3">
       <!-- show bars only on mobile -->

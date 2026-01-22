@@ -1,5 +1,6 @@
 <template>
   <div class="container mx-auto">
+    
     <div class="flex flex-col gap-[12px]">
       <h1 class="text-[20px] font-[600] text-[#191C1F]">Hello, Kevin</h1>
       <p class="text-[14px] font-[400] md:w-[423px]">From your account dashboard. you can easily check & view your <a
@@ -518,6 +519,8 @@ const onSwiper = (swiper) => {
   swiper.navigation.update()
 }
 
+
+const route = useRoute()
 
 const localePath = useLocalePath()
 

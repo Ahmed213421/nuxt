@@ -226,8 +226,8 @@
                     </div>
                     <div class="p-4 border-b-[#E4E7E9]  border-b">
                         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-                            <div
-                                class="lg:border-r-[#E4E7E9] border-b-[#E4E7E9]  lg:border-r xl:border-b-0 border-b pb-4 xl:pb-0 ">
+                            <div :class="locale === 'ar' ? 'lg:border-l-[#E4E7E9] lg:border-l' : 'lg:border-r-[#E4E7E9] lg:border-r'"
+                                class=" border-b-[#E4E7E9]   xl:border-b-0 border-b pb-4 xl:pb-0 ">
                                 <h1>Billing Address</h1>
                                 <div class="flex flex-col gap-[12px] mt-[24px]">
                                     <h6 class="font-[500] text-[14px] text-[#191C1F]">Kevin Gilbert</h6>
@@ -246,8 +246,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="xl:border-r-[#E4E7E9] border-b-[#E4E7E9] pb-4   xl:border-r  xl:border-b-0 border-b mt-6 lg:mt-0 lg:pl-4 xl:pb-0">
+                            <div :class="locale === 'ar' ? 'xl:border-l-[#E4E7E9]  xl:border-l lg:pr-4':'xl:border-r-[#E4E7E9] lg:pl-4 xl:border-r'"
+                                class=" border-b-[#E4E7E9] pb-4    xl:border-b-0 border-b mt-6 lg:mt-0  xl:pb-0">
                                 <h1>Billing Address</h1>
                                 <div class="flex flex-col gap-[12px] mt-[24px]">
                                     <h6 class="font-[500] text-[14px] text-[#191C1F]">Kevin Gilbert</h6>
@@ -266,7 +266,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="xl:pl-4 mt-6 xl:mt-0">
+                            <div :class="locale === 'ar' ? 'xl:pr-4' : 'xl:pl-4'" class=" mt-6 xl:mt-0">
                                 <h1>Billing Address</h1>
                                 <div class="flex flex-col gap-[12px] mt-[24px]">
                                     <h6 class="font-[500] text-[14px] text-[#191C1F]">Kevin Gilbert</h6>
@@ -413,6 +413,7 @@ li {
 </style>
 
 <script setup>
+    const { locale } = useI18n()
 const tableData = [
     {
         name: 'FOUNDATION',

@@ -5,18 +5,57 @@
             <div class="col-span-12">
     
                 <div class="border-[#E4E7E9] border mt-4 rounded-[4px]">
-                    <div class="p-4  flex justify-between border-b border-[#E4E7E9]">
+                    <div class="p-4 border-b border-[#E4E7E9]">
                         <h1>ORDER DETAILS</h1>
-                        <div class="flex items-center gap-[8px] text-[#C65C6A]">
-                            <span class="font-[600] text-[14px]">LEAVE A RATING</span>
-                            <SvgPlus />
+                    </div>
+                    <div class="w-full">
+                        <el-table :data="paginatedItems" style="width: 100%">
+                            <el-table-column prop="products" label="PRODUCTS" width="450">
+                                <template #default="{ row }">
+                                    <div class="flex gap-[16px] items-center">
+                                        <img :src="row.img" class="w-[80x] h-[80px]" alt="">
+                                        <div>
+                                            <h1 class="font-[600] text-[12px] text-[#C65C6A]">{{ row.name }}</h1>
+                                            <p class="font-[400] text-[#191C1F] xl:text-[14px]">{{ row.description
+                                            }}</p>
+                                        </div>
+                                    </div>
+                                </template>
+
+                            </el-table-column>
+                            <el-table-column prop="price" label="PRICE" width="150">
+                                <template #default="{ row }">
+                                    <span class="font-[400] text-[#475156] xl:text-[14px]">
+                                        {{ row.price }}
+                                    </span>
+                                </template>
+                            </el-table-column>
+                            <el-table-column prop="quantity" label="QUANTITY" width="150">
+                                <template #default="{ row }">
+                                    <span class="font-[400] text-[#475156] xl:text-[14px]">
+                                        {{ row.quantity }}
+                                    </span>
+                                </template>
+                            </el-table-column>
+                            <el-table-column prop="subTotal" label="SUB-TOTAL" width="150">
+                                <template #default="{ row }">
+                                    <span class="font-[400] text-[#475156] xl:text-[14px]">
+                                        {{ row.subTotal }}
+                                    </span>
+                                </template>
+                            </el-table-column>
+
+                        </el-table>
+                    </div>
+                    <div class="flex justify-center">
+
+                        <div class="example-pagination-block  pb-5 mx-auto mt-4">
+                            <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :total="tableData.length"
+                            layout="prev, pager, next" @current-change="onPageChange" />
                         </div>
                     </div>
-                    
-                    <div class="p-4 border-b-[#E4E7E9]  border-b">
-                        
-                    </div>             
                 </div>
+
 
             </div>
         </div>
@@ -33,58 +72,160 @@
   font-weight: 500 !important;
   font-size: 12px !important;
 }
+
+.example-pagination-block+.example-pagination-block {
+    margin-top: 10px;
+}
+
+.example-pagination-block .example-demonstration {
+    margin-bottom: 16px;
+}
+
+:deep(.el-pager .number) {
+    border: 1px solid #E4E7E9 !important;
+    border-radius:100px;
+    width:50px;
+    height:50px;
+    margin-right:8px;
+}
+
 </style>
 
 <script setup>
-    const tableData = [
-      {
-        orderid: '#96459761',
-        status: 'completed',
-        date: '2016-05-02',
-        action : 'View Details',
-        total: '$1,500 (5 Products)',
-      },
-      {
-        orderid: '#71667167',
-        action : 'View Details',
-        date: '2016-05-02',
-        status: 'in progress',
-        total: '$80 (11 Products)',
-      },
-      {
-        orderid: '#95214362',
-        action : 'View Details',
-        status: 'cancelled',
-        date: '2016-05-04',
-        total: '$160 (3 Products)',
-      },
-      {
-        orderid: '#71667167',
-        action : 'View Details',
-        status: 'completed',
-        date: '2016-05-01',
-        total: '$80 ( 1 Products)',
-      },
-      {
-        orderid: '#51746385',
-        action : 'View Details',
-        status: 'in progress',
-        date: '2016-05-08',
-        total: '$2,300 (2 Products)',
-      },
-      {
-        orderid: '#51746385',
-        status: 'cancelled',
-        action : 'View Details',
-        date: '2016-05-06',
-        total: '$70 (1 Products)',
-      },
-      {
-        orderid: '#673971743',
-        action : 'View Details',
-        status: 'completed',
-        date: '2016-05-07',
-        total: '$220 (1 Products)',
-      },
-    ]
+
+
+import { ref, computed } from 'vue'
+
+
+
+const currentPage = ref(1)
+const pageSize = ref(12) 
+
+    const paginatedItems = computed(() => {
+    const start = (currentPage.value - 1) * pageSize.value
+    const end = start + pageSize.value
+    return tableData.value.slice(start, end)
+})
+    const tableData = ref([
+        {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        }, {
+            name: 'FOUNDATION',
+            description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
+            price: '$899',
+            quantity: 2,
+            subTotal: '$899',
+            img: '/cream.png'
+        },
+    ])
 </script>
