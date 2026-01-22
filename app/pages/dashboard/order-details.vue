@@ -366,6 +366,9 @@ html[dir="rtl"] .item {
     box-sizing: border-box;
 }
 
+:deep(.el-table .cell) {
+    padding-inline-start: 17px !important;
+}
 
 .ready::before {
     background-color: #C65C6A;

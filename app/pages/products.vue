@@ -46,7 +46,7 @@
                     />
                     </el-select>
                 </div>
-                <div class="flex flex-wrap gap-4 items-center">
+                <div class="flex flex-wrap lg:gap-4   lg:items-center">
                     <el-select
                     v-model="sortingValue"
                     :placeholder="`${$t('select.sortBy')} ${sortingValue}`"
@@ -176,7 +176,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="example-pagination-block mx-auto mt-4">
+                  <div class="example-pagination-block mx-auto mt-4 mb-5">
                     <el-pagination
                     v-model:current-page="currentPage"
                     v-model:page-size="pageSize"

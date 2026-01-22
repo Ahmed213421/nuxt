@@ -67,6 +67,23 @@
   background: #E4E7E9 !important;
 }
 
+:deep(.btn-prev),
+    :deep(.btn-next) {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border:1px solid #C65C6A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:8px;
+}
+
+:deep(.el-table .cell) {
+    padding-inline-start: 17px !important;
+}
+
+
 :deep(.el-table .cell) {
   color: #475156 !important;
   font-weight: 500 !important;
