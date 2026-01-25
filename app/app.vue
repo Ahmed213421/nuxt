@@ -7,7 +7,7 @@
       This is an auto-imported component.
     </AppAlert> -->
 
-     <div class="loaderWrapper"  v-show="showLoader">
+     <div class="loaderWrapper"  v-show="showLoader && route.path !== '/login' && route.path !== '/forget-password' && route.path !=='/reset-password' && route.path !== '/register'">
       <div class="loader">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -25,6 +25,7 @@
 <script setup>
 import { watchEffect,onMounted } from 'vue'
 
+const route = useRoute()
 
 const { locale } = useI18n()
 

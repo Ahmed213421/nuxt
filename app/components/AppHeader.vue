@@ -74,9 +74,9 @@
             </div>
 
             <div class="flex gap-[12px] ">
-              <a href="#" class="border rounded-[12px] whitespace-nowrap bg-[#CF6F7A] py-[13px] px-[19px] text-white">{{$t('login')}}</a>
-              
-                <a href="#" class="border whitespace-nowrap rounded-[12px] border-[1.5px] border-[#CF6F7A] py-[13px] px-[19px] text-[#CF6F7A]">{{$t('register')}}</a>
+              <NuxtLink v-show="!isAuth" to="/login" href="#" class="border rounded-[12px] whitespace-nowrap bg-[#CF6F7A] py-[13px] px-[19px] text-white">{{$t('login')}}</NuxtLink>
+                
+                <NuxtLink to="/register" href="#" class="border whitespace-nowrap rounded-[12px] border-[1.5px] border-[#CF6F7A] py-[13px] px-[19px] text-[#CF6F7A]">{{$t('register')}}</NuxtLink>
                 
             </div>
             <Menu as="div" class="relative inline-block text-left hidden lg:block">
@@ -128,7 +128,7 @@
                   :class="[
                     'block w-full px-4 py-2 text-left text-sm text-red-600',
                     active && 'bg-gray-100'
-                  ]"
+                  ]" @click="logout"
                 >
                   Logout
                 </button>
@@ -155,6 +155,16 @@ import { EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
 
 const switchLocalePath = useSwitchLocalePath()
 
+const isAuth = ref(false)
+onMounted(() => [
+  isAuth.value = localStorage.getItem('auth') === null ? false : true
+  
+])
+
+const logout = () => {
+  localStorage.removeItem('auth')
+  window.location.reload()
+}
 
 const input1 = ref('');
 
