@@ -10,6 +10,11 @@ const route = useRoute()
 
 console.log(route)
 
+
+definePageMeta({
+  middleware: 'auth'
+})
+
 const { locale } = useI18n()
 
 

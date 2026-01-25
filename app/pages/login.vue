@@ -22,8 +22,9 @@
                                     d="M2.17416 13.0445C2.17416 14.8273 2.63615 15.4262 3.56014 16.6274C5.40486 19.0233 8.4986 21.7409 13.0446 21.7409C17.5907 21.7409 20.6844 19.0233 22.5291 16.6274C23.4531 15.4273 23.9151 14.8262 23.9151 13.0445C23.9151 11.2618 23.4531 10.6628 22.5291 9.46161C20.6844 7.06576 17.5907 4.34814 13.0446 4.34814C8.4986 4.34814 5.40486 7.06576 3.56014 9.46161C2.63615 10.6639 2.17416 11.2628 2.17416 13.0445ZM13.0446 8.96809C11.9635 8.96809 10.9266 9.39757 10.1622 10.162C9.39768 10.9265 8.9682 11.9634 8.9682 13.0445C8.9682 14.1257 9.39768 15.1625 10.1622 15.927C10.9266 16.6915 11.9635 17.1209 13.0446 17.1209C14.1258 17.1209 15.1626 16.6915 15.9271 15.927C16.6916 15.1625 17.121 14.1257 17.121 13.0445C17.121 11.9634 16.6916 10.9265 15.9271 10.162C15.1626 9.39757 14.1258 8.96809 13.0446 8.96809Z"
                                     fill="#CF6F7A" />
                             </svg>
-                            <div class="flex mt-4 justify-between">
-                                <input type="checkbox" v-model="check">
+                            <div class="flex mt-4 justify-between items-center">
+                                
+                                <el-checkbox v-model="check"  size="large" />
                                 <h1>forget password?</h1>
                             </div>
                             <div @click="login" class="bg-[#CF6F7A] p-[19.57px] border border-[1.63px] border-[#E0959C] rounded-[12px] text-center mt-3 text-white cursor-pointer">
@@ -124,6 +125,7 @@ const view = () => {
 }
 
 
+onMounted
 </script>
 
 <style scoped>
@@ -159,4 +161,13 @@ const view = () => {
 .separator:not(:empty)::after {
     margin-left: .5em;
 }
+
+:deep(.el-checkbox__input .el-checkbox__inner){
+    border-color: #C65C6A !important;
+
+}
+:deep(.el-checkbox__input.is-checked .el-checkbox__inner){
+        background-color: #C65C6A !important;
+        border-color: #C65C6A !important;
+    }
 </style>

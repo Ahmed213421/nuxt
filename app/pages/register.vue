@@ -11,20 +11,20 @@
                 </div>
                 <div class="mt-10">
                     <h1>user name</h1>
-                    <input type="text" placeholder="enter your user name"
+                    <input type="text" v-model="userName" placeholder="enter your user name"
                         class="login-input mt-[6.5px] md:!w-[418px]">
                 </div>
                 <div class="mt-10">
                     <h1>email </h1>
-                    <input type="text" placeholder="enter your email"
+                    <input type="text" v-model="email" placeholder="enter your email"
                         class="login-input mt-[6.5px] md:!w-[418px]">
                 </div>
                 <div class="mt-10">
                     <h1>password </h1>
-                    <input type="text" placeholder="enter your password"
+                    <input type="text" v-model="password" placeholder="enter your password"
                         class="login-input mt-[6.5px] md:!w-[418px]">
                 </div>
-                <div
+                <div @click="register" 
                     class="bg-[#CF6F7A] md:w-[418px] w-full mt-10 p-[19.57px] border border-[1.63px] border-[#E0959C] rounded-[12px] text-center  text-white cursor-pointer">
                     register
                 </div>
@@ -39,6 +39,29 @@ import { ref } from 'vue'
 const username = ref('')
 
 const input = ref(null)
+
+const userName = ref(null)
+const password = ref(null)
+const email = ref(null)
+const { locale } = useI18n()
+
+
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+const register = () => {
+
+    if (userName.value !== null && password.value !== null && email !== null) {
+        const json = JSON.stringify({
+            "userName": userName.value,
+            "password": password.value,
+            "email" : email.value
+        })
+        localStorage.setItem('auth', json)
+        router.push(`/${locale.value}/dashboard`)
+    }
+}
+
 
 defineI18nRoute(false)
 definePageMeta({
@@ -61,3 +84,4 @@ definePageMeta({
     padding-inline-start: 15px;
 }   
 </style>
+

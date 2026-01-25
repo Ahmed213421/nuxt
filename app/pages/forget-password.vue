@@ -11,7 +11,7 @@
                 </div>
                 <div class="mt-10">
                     <h1>email or phone</h1>
-                    <input type="text" placeholder="enter your user name" class="login-input mt-[6.5px] md:!w-[418px]">
+                    <input type="text" placeholder="enter your phone or email" class="login-input mt-[6.5px] md:!w-[418px]">
                 </div>
                 <div
                     class="bg-[#CF6F7A] w-full md:w-[418px] mt-10 p-[19.57px] border border-[1.63px] border-[#E0959C] rounded-[12px] text-center  text-white cursor-pointer">

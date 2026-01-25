@@ -76,8 +76,8 @@
             <div class="flex gap-[12px] ">
               <NuxtLink v-show="!isAuth" to="/login" href="#" class="border rounded-[12px] whitespace-nowrap bg-[#CF6F7A] py-[13px] px-[19px] text-white">{{$t('login')}}</NuxtLink>
                 
-                <NuxtLink to="/register" href="#" class="border whitespace-nowrap rounded-[12px] border-[1.5px] border-[#CF6F7A] py-[13px] px-[19px] text-[#CF6F7A]">{{$t('register')}}</NuxtLink>
-                
+                <NuxtLink v-show="!isAuth" to="/register" href="#" class="border whitespace-nowrap rounded-[12px] border-[1.5px] border-[#CF6F7A] py-[13px] px-[19px] text-[#CF6F7A]">{{$t('register')}}</NuxtLink>
+                  
             </div>
             <Menu as="div" class="relative inline-block text-left hidden lg:block">
     <!-- 3 dots button -->
@@ -89,8 +89,8 @@
                     <img src="/user.png" alt="">
                 </div>
                 <div class="text-start">
-                    <div class="font-[600] text-[12px]">Andy Warhol</div>
-                    <div class="font-[500] text-[12px] text-[#28353D]">andywarhol@mail.com</div>
+                    <div class="font-[600] text-[12px]">{{auth.userName}}</div>
+                    <div class="font-[500] text-[12px] text-[#28353D]">{{auth.email ?? 'andywarhol@mail.com'}}</div>
                 </div>
             </div>
               <EllipsisVerticalIcon class="w-5 h-5 text-gray-600" />
@@ -156,10 +156,18 @@ import { EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
 const switchLocalePath = useSwitchLocalePath()
 
 const isAuth = ref(false)
+
+let auth = ref('');
+
 onMounted(() => [
   isAuth.value = localStorage.getItem('auth') === null ? false : true
   
+  
 ])
+
+onMounted(() => {
+    auth.value = JSON.parse(localStorage.getItem('auth'))
+})
 
 const logout = () => {
   localStorage.removeItem('auth')
