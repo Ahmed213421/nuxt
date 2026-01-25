@@ -183,11 +183,13 @@
                                 <h1 class="font-[500] text-[20px] text-[#1A1A1A]">{{$t('saleProducts')}}</h1>
                                 <div class="flex flex-col gap-[16px] ">
                                     <div class="flex border border-[#E6E6E6] saleProducts rounded-[6px]">
-                                        <div class="p-5 w-[112px]">
+                                        <NuxtLink  class="p-5 w-[112px]" :to="`/${locale}/product-details`">
                                             <img src="/cream.png" class="w-[98px] h-[98px]" alt="">
-                                        </div>
+                                        </NuxtLink>
                                         <div class="flex flex-col gap-[4px]  justify-center">
-                                            <span class="text-[#4D4D4D] font-[400] text-[14px]">Foundation</span>
+                                            <NuxtLink :to="`/${locale}/product-details`"
+                                                class="text-[#4D4D4D] font-[400] text-[14px]">
+                                                Foundation</NuxtLink>
                                             <div class=" text-[16px]">
                                                 <span class="text-[#1A1A1A] font-[#1A1A1A]">$32.00</span>
                                                 <del class="font-[400] text-[#999999] ml-1">$20.99</del>
@@ -262,12 +264,16 @@
                                 </el-button>
                                 
                             </div>
-                            <div>
+                            <NuxtLink :to="`/${locale}/product-details`">
                                 <img src="/Productmage.png" alt="">
-                            </div>
+                            </NuxtLink>
+
+
                             <div class="flex px-1 flex-col xl:flex-row">
                                 <div class="flex flex-col  gap-[5.5px]">
-                                    <span class="title-buyed font-[400] text-[12.83px] break-all xl:w-[100px]">Foundation</span>
+                                    <NuxtLink :to="`/${locale}/product-details`"
+                                class="title-buyed font-[400] text-[12.83px] break-all xl:w-[100px]">Foundation
+                            </NuxtLink>
                                     <div class="flex gap-[1.83px]">
                                         <span class="price font-[500] text-[#1A1A1A] text-[14.66px]">$14.99</span>
                                         <del class="discount font-[400] text-[#999999] text-[14.66px]">$20.99</del>

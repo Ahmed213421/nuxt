@@ -55,7 +55,7 @@
         class="mySwiper relative h-[400px]"
       >
         <SwiperSlide v-for="(n,index) in images" :key="n">
-          <div class="w-[80px] flex justify-center items-center h-[80px] border border-[#C4C4C4]">
+          <div class="cursor-pointer w-[80px] flex justify-center items-center h-[80px] border border-[#C4C4C4]">
             <img :src="n" @click="setImage(n)" class="w-[w-47px] h-[70px]" alt="">
           </div>
         </SwiperSlide>
@@ -204,12 +204,13 @@
                             </el-button>
                             
                         </div>
-                        <div>
+                        <NuxtLink :to="`/${locale}/product-details`">
                             <img src="/Productmage.png" alt="">
-                        </div>
+                        </NuxtLink>
                         <div class="flex px-1 flex-row">
                             <div class="flex flex-col  gap-[5.5px]">
-                                <span class="title-buyed font-[400] text-[12.83px] break-all xl:w-[100px]">Foundation</span>
+                                <NuxtLink :to="`/${locale}/product-details`" class="title-buyed font-[400] text-[12.83px] break-all xl:w-[100px]">Foundation</NuxtLink>
+
                                 <div class="flex gap-[1.83px]">
                                     <span class="price font-[500] text-[#1A1A1A] text-[14.66px]">$14.99</span>
                                     <del class="discount font-[400] text-[#999999] text-[14.66px]">$20.99</del>
@@ -460,6 +461,9 @@ const reviews = ref([{ id: 1, rating: 4 }])
 
 const currentPage = ref(1)
 const pageSize = ref(4) 
+
+
+const { locale } = useI18n()
 
 // Items to show on current page
 const paginatedItems = computed(() => {

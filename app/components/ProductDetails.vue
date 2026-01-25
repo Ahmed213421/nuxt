@@ -26,16 +26,20 @@
                     <div class="best-sale bg-[#2388FF] whitespace-nowrap py-[2.75px] text-center top-[10px] text-[#FFFFFF] absolute left-[84px] px-[7.33px] rounded-[3.67px]  font-[400] text-[12.83px]">
                         {{$t('bestSale')}}
                     </div>
-                    <div class="flex flex-col items-center">
+                    <NuxtLink :to="`/${locale}/product-details`" class="flex flex-col items-center">
                         <img src="/product1.png" alt="">
                         <a href="#" class="flex items-center justify-center gap-[10px] text-white w-[80%] text-center bg-[#00B207] py-[14px] px-[32px] rounded-[43px]">{{$t('addToCart')}} <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.81706 6.48324H2.31706L0.650391 15.6499H15.6504L13.9837 6.48324H11.4837M4.81706 6.48324V3.98324C4.81706 2.14229 6.30944 0.649902 8.15039 0.649902C9.99134 0.649902 11.4837 2.14229 11.4837 3.98324V6.48324M4.81706 6.48324H11.4837M4.81706 6.48324V8.98324M11.4837 6.48324V8.98324" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         </a>
-                    </div>
+                    </NuxtLink>
 
                     <div class="gap-[8px] flex flex-col text-center mt-5">
-                        <span class="font-[400] text-[18px] text-[#CF6F7A]">Vitamin C Serum</span>
+                           <NuxtLink :to="`/${locale}/product-details`"
+                                class="font-[400] text-[18px] text-[#CF6F7A]">Vitamin C
+                                SdddesrumSdddesrum</NuxtLink>
+
+  
                         <div class="flex gap-[4px] text-[24px] justify-center">
                             <span class="font-[500]">$12.00</span>
                             <del class="font-[400]">$24.00</del>
@@ -95,12 +99,17 @@
                             <SvgViewItem />
                         </div>
                     </div>
-                    <div>
-                        <img src="/ImgSliderBuyed1.png"  class="w-full" alt="">
-                    </div>
+                       <NuxtLink :to="`/${locale}/product-details`">
+                            <img src="/ImgSliderBuyed1.png" class="w-full" alt="">
+                        </NuxtLink>
+  
                     <div class="flex px-1 flex-col xl:flex-row">
                         <div class="flex flex-col  gap-[5.5px]">
-                            <span class="title-buyed font-[400] text-[12.83px] break-all xl:w-[100px]">Vitamin C SdddesrumSdddesrum</span>
+                               <NuxtLink :to="`/${locale}/product-details`"
+                                    class="title-buyed font-[400] text-[12.83px] break-all xl:w-[100px]">Vitamin C
+                                    SdddesrumSdddesrum</NuxtLink>
+
+  
                             <div class="flex gap-[1.83px]">
                                 <span class="price font-[500] text-[#1A1A1A] text-[14.66px]">$14.99</span>
                                 <del class="discount font-[400] text-[#999999] text-[14.66px]">$20.99</del>
@@ -137,5 +146,8 @@
 const reviews = ref([{ id: 1, rating: 5 }, { id: 2, rating: 4 }, { id: 2, rating: 4 }, { id: 2, rating: 4 }, { id: 2, rating: 4 }, { id: 2, rating: 4 }])
 
 import VueCountdown from '@chenfengyuan/vue-countdown'
+
+
+const { locale } = useI18n()
 
 </script>

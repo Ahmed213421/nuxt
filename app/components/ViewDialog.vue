@@ -57,7 +57,7 @@
         class="mySwiper relative h-[400px]"
       >
         <SwiperSlide v-for="(src,index) in images" :key="n">
-          <div @click="setImage(src)" class="w-[80px] flex gallery-thumbnails justify-center items-center h-[80px] border border-[#C4C4C4]">
+          <div @click="setImage(src)" class="cursor-pointer w-[80px] flex gallery-thumbnails justify-center items-center h-[80px] border border-[#C4C4C4]">
             <img :src="src"  class="w-[w-47px] h-[70px]" alt="">
           </div>
         </SwiperSlide>
