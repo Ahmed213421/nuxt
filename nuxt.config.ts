@@ -9,10 +9,11 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', 'nuxt-swiper', '@element-plus/nuxt', '@nuxtjs/i18n'],
 
   css: [
-    '~/assets/css/first.css', 'primeicons/primeicons.css', 'swiper/css',
+    'primeicons/primeicons.css', 'swiper/css',
     'swiper/css/grid',
     'swiper/css/navigation',
     '@fortawesome/fontawesome-svg-core/styles.css',
+    '~/assets/css/first.css',
 
   ],
 
@@ -36,7 +37,7 @@ export default defineNuxtConfig({
       theme: {
         preset: Aura,
         options: {
-          cssLayer: true,
+          cssLayer: false,
           darkModeSelector: '.never-enable-dark',
 
         },

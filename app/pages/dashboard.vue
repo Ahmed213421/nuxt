@@ -54,8 +54,8 @@ const menuItems = [
   { label: 'Order History', to: '/dashboard/order-history',icon:icon2 },
   { label: 'Track Order', to: '/dashboard/order-details',icon:icon3 },
   { label: 'Shopping Cart', to: '/dashboard/wishlist' ,icon:icon4},
-  { label: 'Wishlist', to: '/dashboard/compare' ,icon:icon5},
-  { label: 'Compare', to: '/dashboard/addresses' ,icon:icon6},
+  { label: 'Wishlist', to: '/dashboard/wish-list' ,icon:icon5},
+  { label: 'Compare', to: '/dashboard/compare' ,icon:icon6},
   { label: 'Cards & Address', to: '/dashboard/history' ,icon:icon7},
   { label: 'Browsing History', to: '/dashboard/history',icon:icon8 },
   { label: 'Setting', to: '/dashboard/history' ,icon:icon9},
@@ -83,6 +83,11 @@ const isActive = (to) => {
             </div>
           </el-breadcrumb-item>
           <el-breadcrumb-item>{{ $t('User Account') }}</el-breadcrumb-item>
+          
+          <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/compare`">
+            {{ $t('compare') }}
+
+          </el-breadcrumb-item>
           <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/` || route.path == `/${locale}/dashboard` "><span
               :class="route.path === `/${locale}/dashboard/` || `/${locale}/dashboard` ? 'text-[#C65C6A]' : ''">{{
                 $t('Dashboard')
