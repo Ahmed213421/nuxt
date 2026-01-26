@@ -49,18 +49,21 @@ const { locale } = useI18n()
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
+let r = (Math.random() + 1).toString(7).substring(7)
+
 const register = () => {
 
     if (userName.value !== null && password.value !== null && email !== null) {
         const json = JSON.stringify({
             "userName": userName.value,
-            "password": password.value,
-            "email" : email.value
+            "email": email.value,
+            "token" : r
         })
         localStorage.setItem('auth', json)
         router.push(`/${locale.value}/dashboard`)
     }
 }
+
 
 
 defineI18nRoute(false)

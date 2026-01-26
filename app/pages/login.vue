@@ -94,6 +94,7 @@ const router = useRouter()
 const route = useRoute()
 const { locale } = useI18n()
 
+let r = (Math.random() + 1).toString(7).substring(7)
 const login = () => {
     if (check.value === true) {
         router.push('/forget-password')
@@ -102,7 +103,8 @@ const login = () => {
     if (userName.value !== null && password.value !== null) {
         const json = JSON.stringify({
             "userName" : userName.value,
-            "password" : password.value,
+            "password": password.value,
+            "token" : r
         })
         localStorage.setItem('auth', json)
           router.push(`/${locale.value}/dashboard`)
