@@ -144,12 +144,13 @@
                           </el-button>
                           
                       </div>
-                        <div>
+                      
+                        <NuxtLink :to="`/${locale}/product-details`">
                             <img src="/Productmage.png" alt="">
-                        </div>
+                        </NuxtLink>
                         <div class="flex px-1 flex-col xl:flex-row">
                             <div class="flex flex-col  gap-[5.5px]">
-                                <span class="title-buyed font-[400] text-[12.83px] break-all xl:w-[100px]">Foundation</span>
+                                <NuxtLink :to="`/${locale}/product-details`" class="title-buyed font-[400] text-[12.83px] break-all xl:w-[100px]">Foundation</NuxtLink>
                                 <div class="flex gap-[1.83px]">
                                     <span class="price font-[500] text-[#1A1A1A] text-[14.66px]">$14.99</span>
                                     <del class="discount font-[400] text-[#999999] text-[14.66px]">$20.99</del>
@@ -210,6 +211,9 @@
 <script lang="ts" setup>
 import { onBeforeMount, computed, ref } from 'vue'
 
+
+
+const { locale } = useI18n()
 
 const dialogVisible = ref(false)
 

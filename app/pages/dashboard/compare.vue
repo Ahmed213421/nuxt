@@ -4,7 +4,7 @@
         <div class="border border-[#E4E7E9]">
             <div class="grid grid-cols-12">
                 
-                <div class="2xl:col-span-3 lg:col-span-4 md:col-span-6 col-span-6">
+                <div class="lg:col-span-3 md:col-span-6 col-span-6">
                     <div class="p-2 pb-7 border border-[#E4E7E9]" style="visibility:hidden">
 
                         <div class="border p-2 py-3 border-[#E4E7E9]">
@@ -45,7 +45,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="2xl:col-span-3 lg:col-span-4 md:col-span-6 col-span-6">
+                <div class="lg:col-span-3 md:col-span-6 col-span-6">
                     <div class="p-2 pb-7 border border-[#E4E7E9]">
 
                         <div class="border p-2 py-3 border-[#E4E7E9]">
@@ -94,7 +94,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="2xl:col-span-3 lg:col-span-4 md:col-span-6 col-span-6">
+                <div class="lg:col-span-3 md:col-span-6 col-span-6">
                     <div class="p-2 pb-7 border border-[#E4E7E9]">
 
                         <div class="border p-2 py-3 border-[#E4E7E9]">
@@ -143,7 +143,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="2xl:col-span-3 lg:col-span-4 md:col-span-6 col-span-6">
+                <div class="lg:col-span-3 md:col-span-6 col-span-6">
                     <div class="p-2 pb-7 border border-[#E4E7E9]">
 
                         <div class="border p-2 py-3 border-[#E4E7E9]">

@@ -118,3 +118,9 @@ html[dir="rtl"] .el-dialog__headerbtn{
     fill: white;
     stroke: black;
 }
+
+@media (min-width: 768px) {
+    .border-payment:not(:last-of-type) {
+        border-inline-end: 1px solid #E4E7E9;
+    }
+}

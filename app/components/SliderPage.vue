@@ -1,13 +1,21 @@
 <template>
 
 
-    <swiper-container ref="containerRef" class=" xl:h-[893px] lg:h-[700px] md:h-[500px] h-[200px]">
-      <swiper-slide
-        v-for="(slide, idx) in slides"
-        :key="idx"
-        :style="{ backgroundImage: `url(/${slide.img})`, color: white}"
-        class="slidebg h-full lg:bg-cover xl:bg-cover md:bg-cover bg-cover  bg-no-repeat flex items-center bg-bottom"
-      >
+    <Swiper
+    class="xl:h-[893px] lg:h-[700px] md:h-[500px] h-[200px]"
+    :modules="[Autoplay]"
+    :autoplay="{
+      delay: 5000,
+      disableOnInteraction: false
+    }"
+    :loop="true"
+  >
+    <SwiperSlide
+      v-for="(slide, id) in slides"
+      :key="id"
+      :style="{ backgroundImage: `url(/${slide.img})` }"
+      class="h-full bg-cover bg-no-repeat flex items-center bg-bottom"
+    >
       <div :class="locale === 'ar' ? ' lg:mr-[650px]  xl:mr-[950px]  md:mr-[450px] mr-[250px] 2xl:mr-[1250px]' : 'lg:ml-[200]  md:ml-[50px] ml-[10px]'" class="flex flex-col md:w-[596px] lg:gap-[28px] gap-[10px]">
         <span class="md:font-[600] xl:text-[48px] lg:text-[30px] md:text-[20px] text-[12px]">{{$t('hero.title')}}</span>
         <span class="md:font-[500] md:text-[36px] sm:text-[15px] text-[15px]">{{$t('hero.subtitle')}}</span>
@@ -17,13 +25,13 @@
         </div>
         <a href="#" class="flex items-center w-[100px] justify-between md:w-[191px] font-[600] text-[12px] md:text-[16px] text-[#C65C6A] bg-[#FFFFFF] md:gap-[12px] gap-[5px] rounded-[53px] py-[5px] md:py-[16px] px-[10px] md:px-[40px]">{{ $t('hero.cta') }} <SvgRightArrow class="rightArw"/></a>
       </div>
-      </swiper-slide>
-    </swiper-container>
+    </SwiperSlide>
+  </Swiper>
 </template>
 
 <script setup>
     import { Swiper, SwiperSlide } from 'swiper/vue'
-    import { Grid, Navigation,Pagination } from 'swiper/modules'
+    import { Grid,Autoplay } from 'swiper/modules'
 const { locale } = useI18n()
 // const modules = [Grid, Navigation, Pagination]
     

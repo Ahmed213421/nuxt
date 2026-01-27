@@ -25,7 +25,9 @@
                             <div class="flex mt-4 justify-between items-center">
                                 
                                 <el-checkbox v-model="check"  size="large" />
-                                <h1>forget password?</h1>
+                                <NuxtLink to="/forget-password">
+                                <h1 class="cursor-pointer">forget password?</h1>
+                                </NuxtLink>
                             </div>
                             <div @click="login" class="bg-[#CF6F7A] p-[19.57px] border border-[1.63px] border-[#E0959C] rounded-[12px] text-center mt-3 text-white cursor-pointer">
                                 login
@@ -62,7 +64,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="text-[19px] text-[#6D6666] font-[400]">dont have an account? <span class="text-[#000000] font-[700] text-[19px]">sign up</span></div>
+                    <div class="text-[19px] text-[#6D6666] font-[400]">dont have an account? <NuxtLink to="/register"><span class="text-[#000000] font-[700] text-[19px] cursor-pointer">sign up</span></NuxtLink></div>
                 </div>
                 </div>
             </div>
@@ -85,6 +87,7 @@ const input = ref(null)
 
 const userName = ref(null)
 const password = ref(null)
+const email = ref(null)
 
 const check = ref(false)
 

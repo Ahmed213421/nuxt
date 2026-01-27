@@ -76,16 +76,16 @@
                         <h1 class="font-[600] text-[36px] text-[#1A1A1A]">Foundation</h1>
                         <span class="text-[14px] text-[#2C742F] font-[400] py-[4px] px-[8px] border rounded-[4px] bg-[#20B52633]">in stock</span>
                       </div>
-                      <div class="flex gap-[12px]">
+                      <div class="flex items-center gap-[12px]">
 
-                          <div class="ratings flex gap-[4px]">
+                          <div class="ratings flex gap-[4px] items-center">
                               <div v-for="review in reviews" :key="review.id">
                                   <font-awesome-icon v-for="i in 5" :key="i"
                                   icon="fa-solid fa-star" class="text-sm" :class="i <= review.rating ? 'text-[#FF8A00]' : 'text-[#CCCCCC]'"/>
                                 </div>
                                 <span class="text-[14px] text-[#666666] font-[400]">4 Review</span>
                         </div>
-                        <span class="text-[14px] text-[#666666]">.</span>
+                        <span class="w-[3px] rounded-[50%] h-[3px] bg-[#666666]"></span>
                         <div class="tetxt-[#666666] text-[14px] font-[400]"><span class="font-[500] text-[14px] text-[#333333] mr-1 ">SKU:</span>2,521,44</div>
                     </div>
 

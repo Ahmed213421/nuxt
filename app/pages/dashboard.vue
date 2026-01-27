@@ -83,9 +83,12 @@ const isActive = (to) => {
             </div>
           </el-breadcrumb-item>
           <el-breadcrumb-item>{{ $t('User Account') }}</el-breadcrumb-item>
-          
-          <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/compare`">
+          <el-breadcrumb-item v-if="route.path.includes(`/dashboard/compare`)">
             {{ $t('compare') }}
+
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`/dashboard/checkout`)">
+            {{ $t('Shooping Card') }}
 
           </el-breadcrumb-item>
           <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/` || route.path == `/${locale}/dashboard` "><span
@@ -101,6 +104,16 @@ const isActive = (to) => {
           <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/order-details/` || route.path == `/${locale}/dashboard/order-details` "><span
               :class="route.path === `/${locale}/order-details/` || `/${locale}/order-details` ? 'text-[#C65C6A]' : ''">{{
                 $t('Order Detatils')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`dashboard/checkout`) "><span
+              :class="route.path.includes(`dashboard/checkout`) ? 'text-[#C65C6A]' : ''">{{
+                $t('Check Out')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`dashboard/wish-list`) "><span
+              :class="route.path.includes(`dashboard/wish-list`) ? 'text-[#C65C6A]' : ''">{{
+                $t('Wish List')
               }}</span>
           </el-breadcrumb-item>
         </el-breadcrumb>
@@ -120,7 +133,7 @@ const isActive = (to) => {
     
     <div class="flex md:gap-[70px]">
       <!-- desktop menu -->
-       <aside v-if="!isMobile" class="shrink-0 lg:w-[264px]  border border-[#E4E7E9] rounded-[4px] h-[510px] pt-[16px]">
+       <aside v-if="!isMobile && !route.path.includes(`/dashboard/checkout`) && !route.path.includes(`/dashboard/wish-list`) && !route.path.includes(`/dashboard/compare`)" class="shrink-0 lg:w-[264px]  border border-[#E4E7E9] rounded-[4px] h-[510px] pt-[16px]">
         <div class="surface-card border-round border-1 surface-border overflow-hidden">
           <ul class="list-none p-0 m-0">
             <li v-for="item in menuItems" :key="item.to"

@@ -2,9 +2,12 @@
     <div class=" border-b border-[#246062] hidden md:block">
 
     <header class="flex container p-2 xl:p-0 mx-auto justify-between items-center">
+      <NuxtLink to="/">
         <div class="flex hidden xl:block">
             <SvgIconHeader />
-        </div>
+          </div>
+        </NuxtLink>
+
         <div class="py-[23px] h-[44px] items-center  flex gap-[24px]">
             <div class="relative w-full max-w-sm">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -15,7 +18,7 @@
                 
                 <input 
                     type="text" 
-                    class="block xl:w-[327px] xl:w-[250px] lg:w-[200px] w-[150px] border border-[1.5px] border-[#CF6F7A] pl-10 pr-[16px] py-[14px] rounded-[12px] leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                    class="block xl:w-[327px] lg:w-[200px] w-[150px] border border-[1.5px] border-[#CF6F7A] pl-10 pr-[16px] py-[14px] rounded-[12px] leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
                     :placeholder="`${$t('search')}...`"
                 >
 
@@ -90,7 +93,7 @@
                 </div>
                 <div class="text-start">
                     <div class="font-[600] text-[12px]">{{auth?.userName}}</div>
-                    <div class="font-[500] text-[12px] text-[#28353D]">{{auth?.email}}</div>
+                    <div class="font-[500] text-[12px] text-[#28353D]">{{auth?.email ?? 'email@email.com'}}</div>
                 </div>
             </div>
               <EllipsisVerticalIcon class="w-5 h-5 text-gray-600" />
