@@ -211,7 +211,7 @@
                                 </div>
                             
                             
-                            <div class="grid grid-cols-12 gap-4">
+                            <div class="grid grid-cols-12 gap-4 mt-4">
                                 <div class=" col-span-12">
                             <el-form
                                 :label-position="labelPosition"

@@ -143,7 +143,7 @@
 
                     <div class="flex gap-[12px] py-[18px] flex-col lg:flex-row">
                       <div class="rounded-[170px] flex p-[8px] w-[124px] h-[50px] items-center justify-between border border-[#E6E6E6]">
-                        <div @click="count--" class="w-[34px] cursor-pointer rounded-[170px] h-[34px] flex justify-center bg-[#F2F2F2]">
+                        <div @click="decrement" class="w-[34px] cursor-pointer rounded-[170px] h-[34px] flex justify-center bg-[#F2F2F2]">
                           _
                         </div>
                         <span>{{ count }}</span>
@@ -464,6 +464,15 @@ const pageSize = ref(4)
 
 
 const { locale } = useI18n()
+
+const decrement = () => {
+  count.value--
+
+  if(count.value < 0){
+    alert('can not be less than zero')
+    count.value = 0
+  }
+}
 
 // Items to show on current page
 const paginatedItems = computed(() => {

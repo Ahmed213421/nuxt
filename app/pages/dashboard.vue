@@ -17,6 +17,10 @@ definePageMeta({
 
 const { locale } = useI18n()
 
+const logout = () => {
+  localStorage.removeItem('auth')
+  window.location.reload()
+}
 
 import icon1 from '~/components/svg/dashboard1.vue'
 import icon2 from '~/components/svg/dashboard2.vue'
@@ -53,14 +57,13 @@ const menuItems = [
   { label: 'Home', to: '/dashboard',icon:icon1 },
   { label: 'Order History', to: '/dashboard/order-history',icon:icon2 },
   { label: 'Track Order', to: '/dashboard/order-details',icon:icon3 },
-  { label: 'Shopping Cart', to: '/dashboard/wishlist' ,icon:icon4},
+  { label: 'Shopping Cart', to: '/dashboard/dashboard' ,icon:icon4},
   { label: 'Wishlist', to: '/dashboard/wish-list' ,icon:icon5},
   { label: 'Compare', to: '/dashboard/compare' ,icon:icon6},
-  { label: 'Cards & Address', to: '/dashboard/history' ,icon:icon7},
-  { label: 'Browsing History', to: '/dashboard/history',icon:icon8 },
-  { label: 'Setting', to: '/dashboard/history' ,icon:icon9},
-  { label: 'Returns', to: '/dashboard/history' ,icon:icon10},
-  { label: 'Log-out', to: '/dashboard/history' ,icon:icon11},
+  { label: 'Cards & Address', to: '/dashboard/dashboard' ,icon:icon7},
+  { label: 'Browsing history', to: '/dashboard/dashboard',icon:icon8 },
+  { label: 'Setting', to: '/dashboard/dashboard' ,icon:icon9},
+  { label: 'Returns', to: '/dashboard/dashboard' ,icon:icon10},
 ]
 
 const isActive = (to) => {
@@ -83,12 +86,9 @@ const isActive = (to) => {
             </div>
           </el-breadcrumb-item>
           <el-breadcrumb-item>{{ $t('User Account') }}</el-breadcrumb-item>
-          <el-breadcrumb-item v-if="route.path.includes(`/dashboard/compare`)">
-            {{ $t('compare') }}
-
-          </el-breadcrumb-item>
+          
           <el-breadcrumb-item v-if="route.path.includes(`/dashboard/checkout`)">
-            {{ $t('Shooping Card') }}
+            {{ $t('Shopping Card') }}
 
           </el-breadcrumb-item>
           <el-breadcrumb-item v-if="route.path == `/${locale}/dashboard/` || route.path == `/${locale}/dashboard` "><span
@@ -114,6 +114,11 @@ const isActive = (to) => {
           <el-breadcrumb-item v-if="route.path.includes(`dashboard/wish-list`) "><span
               :class="route.path.includes(`dashboard/wish-list`) ? 'text-[#C65C6A]' : ''">{{
                 $t('Wish List')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`dashboard/compare`) "><span
+              :class="route.path.includes(`dashboard/compare`) ? 'text-[#C65C6A]' : ''">{{
+                $t('compare')
               }}</span>
           </el-breadcrumb-item>
         </el-breadcrumb>
@@ -142,6 +147,11 @@ const isActive = (to) => {
                 <component :is="item.icon" class="dashboard-svg"/>
               <NuxtLink :to="localePath(item.to)">{{ item.label }}</NuxtLink>
             </li>
+            <li class="py-[10px] flex gap-[12px] ps-[24px] cursor-pointer" @click="logout">
+              <icon11 class="dashboard-svg"/>
+              <span>Log out</span>
+            </li>
+            
 
           </ul>
         </div>
