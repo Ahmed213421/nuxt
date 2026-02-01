@@ -44,6 +44,13 @@
                                     </span>
                                 </template>
                             </el-table-column>
+                            <el-table-column prop="reshopping" label="RESHOPPING" width="150">
+                                <template #default="{ row }">
+                                    <span class="font-[500] inline-block !py-[5px] px-[10px] rounded-[12px] border border-[#B34150] bg-[#FFEFF1] text-[#B34150] xl:text-[12px]">
+                                        {{ row.reshopping }}
+                                    </span>
+                                </template>
+                            </el-table-column>
 
                         </el-table>
                     </div>
@@ -130,119 +137,136 @@ const pageSize = ref(12)
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         }, {
             name: 'FOUNDATION',
             description: 'Fit Me Matte + Poreless Foundation – Liquid Foundation for Natural Coverage, Long-Lasting, Suitable for Oily Skin',
             price: '$899',
             quantity: 2,
             subTotal: '$899',
-            img: '/cream.png'
+            img: '/cream.png',
+            reshopping:'reshopping',
         },
     ])
 </script>

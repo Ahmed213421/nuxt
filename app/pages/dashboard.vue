@@ -60,7 +60,7 @@ const menuItems = [
   { label: 'Shopping Cart', to: '/dashboard/dashboard' ,icon:icon4},
   { label: 'Wishlist', to: '/dashboard/wish-list' ,icon:icon5},
   { label: 'Compare', to: '/dashboard/compare' ,icon:icon6},
-  { label: 'Cards & Address', to: '/dashboard/dashboard' ,icon:icon7},
+  { label: 'Cards & Address', to: '/dashboard/address' ,icon:icon7},
   { label: 'Browsing history', to: '/dashboard/dashboard',icon:icon8 },
   { label: 'Settings', to: '/dashboard/settings' ,icon:icon9},
   { label: 'Returns', to: '/dashboard/dashboard' ,icon:icon10},
@@ -74,7 +74,7 @@ const isActive = (to) => {
 
 <template>
   <div>
-    <div class="bg-[#F2F4F5]" v-if="!isMobile">
+    <div class="bg-[#F2F4F5]" v-if="!isMobile && !route.path.includes(`/dashboard/error`)">
       <div class="container xl:pl-[12%] mx-auto py-5 px-6">
 
         <el-breadcrumb :separator-icon="ArrowRight" class="flex items-center">
@@ -148,7 +148,7 @@ const isActive = (to) => {
     
     <div class="flex md:gap-[70px]">
       <!-- desktop menu -->
-       <aside v-if="!isMobile && !route.path.includes(`/dashboard/checkout`) && !route.path.includes(`/dashboard/customer-support`) && !route.path.includes(`/dashboard/faqs`) && !route.path.includes(`/dashboard/settings`) && !route.path.includes(`/dashboard/wish-list`) && !route.path.includes(`/dashboard/compare`)" class="shrink-0 lg:w-[264px]  border border-[#E4E7E9] rounded-[4px] h-[510px] pt-[16px]">
+       <aside v-if="!isMobile && !route.path.includes(`/dashboard/checkout`) && !route.path.includes(`/dashboard/address`) && !route.path.includes(`/dashboard/error`) && !route.path.includes(`/dashboard/track-order`) && !route.path.includes(`/dashboard/shopping-card`) && !route.path.includes(`/dashboard/customer-support`) && !route.path.includes(`/dashboard/faqs`) && !route.path.includes(`/dashboard/settings`) && !route.path.includes(`/dashboard/wish-list`) && !route.path.includes(`/dashboard/compare`)" class="shrink-0 lg:w-[264px]  border border-[#E4E7E9] rounded-[4px] h-[510px] pt-[16px]">
         <div class="surface-card border-round border-1 surface-border overflow-hidden">
           <ul class="list-none p-0 m-0">
             <li v-for="item in menuItems" :key="item.to"
