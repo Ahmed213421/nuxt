@@ -14,7 +14,7 @@
       v-for="(slide, id) in slides"
       :key="id"
       :style="{ backgroundImage: `url(/${slide.img})` }"
-      class="h-full bg-cover bg-no-repeat flex items-center bg-bottom"
+      class="h-full bg-cover bg-no-repeat !flex items-center   bg-bottom"
     >
       <div :class="locale === 'ar' ? ' lg:mr-[650px]  xl:mr-[950px]  md:mr-[450px] mr-[250px] 2xl:mr-[1250px]' : 'lg:ml-[200]  md:ml-[50px] ml-[10px]'" class="flex flex-col md:w-[596px] lg:gap-[28px] gap-[10px]">
         <span class="md:font-[600] xl:text-[48px] lg:text-[30px] md:text-[20px] text-[12px]">{{$t('hero.title')}}</span>

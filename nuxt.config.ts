@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', 'nuxt-swiper', '@element-plus/nuxt', '@nuxtjs/i18n'],
 
   css: [
+    '~/assets/css/tailwind.css',
     'primeicons/primeicons.css', 'swiper/css',
     'swiper/css/grid',
     'swiper/css/navigation',

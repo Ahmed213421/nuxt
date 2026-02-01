@@ -62,7 +62,7 @@ const menuItems = [
   { label: 'Compare', to: '/dashboard/compare' ,icon:icon6},
   { label: 'Cards & Address', to: '/dashboard/dashboard' ,icon:icon7},
   { label: 'Browsing history', to: '/dashboard/dashboard',icon:icon8 },
-  { label: 'Setting', to: '/dashboard/dashboard' ,icon:icon9},
+  { label: 'Settings', to: '/dashboard/settings' ,icon:icon9},
   { label: 'Returns', to: '/dashboard/dashboard' ,icon:icon10},
 ]
 
@@ -74,7 +74,7 @@ const isActive = (to) => {
 
 <template>
   <div>
-    <div class="bg-[#F2F4F5]">
+    <div class="bg-[#F2F4F5]" v-if="!isMobile">
       <div class="container xl:pl-[12%] mx-auto py-5 px-6">
 
         <el-breadcrumb :separator-icon="ArrowRight" class="flex items-center">
@@ -121,6 +121,16 @@ const isActive = (to) => {
                 $t('compare')
               }}</span>
           </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`dashboard/settings`) "><span
+              :class="route.path.includes(`dashboard/settings`) ? 'text-[#C65C6A]' : ''">{{
+                $t('Settings')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`dashboard/customer-support`) "><span
+              :class="route.path.includes(`dashboard/customer-support`) ? 'text-[#C65C6A]' : ''">{{
+                $t('Customer Support')
+              }}</span>
+          </el-breadcrumb-item>
         </el-breadcrumb>
         
       </div>
@@ -138,7 +148,7 @@ const isActive = (to) => {
     
     <div class="flex md:gap-[70px]">
       <!-- desktop menu -->
-       <aside v-if="!isMobile && !route.path.includes(`/dashboard/checkout`) && !route.path.includes(`/dashboard/wish-list`) && !route.path.includes(`/dashboard/compare`)" class="shrink-0 lg:w-[264px]  border border-[#E4E7E9] rounded-[4px] h-[510px] pt-[16px]">
+       <aside v-if="!isMobile && !route.path.includes(`/dashboard/checkout`) && !route.path.includes(`/dashboard/customer-support`) && !route.path.includes(`/dashboard/faqs`) && !route.path.includes(`/dashboard/settings`) && !route.path.includes(`/dashboard/wish-list`) && !route.path.includes(`/dashboard/compare`)" class="shrink-0 lg:w-[264px]  border border-[#E4E7E9] rounded-[4px] h-[510px] pt-[16px]">
         <div class="surface-card border-round border-1 surface-border overflow-hidden">
           <ul class="list-none p-0 m-0">
             <li v-for="item in menuItems" :key="item.to"
@@ -160,6 +170,9 @@ const isActive = (to) => {
 
         <NuxtPage />
     </div>
+
+    
+    
 
     <!-- mobile overlay sidebar ONLY mounted on mobile -->
     <Sidebar
@@ -187,5 +200,69 @@ const isActive = (to) => {
       </div>
     </Sidebar>
   </div>
+
+  <div class="mt-12 bg-[#F2F4F5] py-[72px] lg:px-[190px]" v-if="route.path.includes(`/dashboard/customer-support`)">
+      <div class="container mx-auto  p-5 xl:p-0">
+
+        <div class="mx-auto w-full flex justify-center">
+
+          <div
+            class="bg-[#3086C8] text-[14px] font-[400] text-white w-fit rounded-[2px] md:py-[8px] py-[4px] md:px-[16px] px-[10px] ">
+            CONTACT US
+
+          </div>
+        </div>
+        <div class="text-[24px] font-[600] text-center pt-4">Don’t find your answer Contact with us</div>
+      
+        <div class="grid grid-cols-12  gap-[24px] mt-6">
+          <div class="col-span-12 lg:col-span-6">
+            <div class="p-[32px] bg-[#FFFFFF]">
+
+              <div class=" flex gap-[24px] flex-col md:flex-row">
+                <div class="bg-[#EAF6FE] w-[96px] h-[96px] p-5 flex items-center justify-center">
+                  <SvgContact1 />
+                </div>
+                <div class="flex flex-col gap-[24px]">
+                  <div class="flex flex-col gap-[16px]">
+                    <h5 class="font-[600] text-[18px]">Call us now</h5>
+                    <p class="font-[400] text-[14px] text-[#5F6C72]">we are available online from 9:00 AM to 5:00 PM (GMT95:45) Talk with use now</p>
+                    <h5 class="text-[24px] font-[400]">+1-202-555-0126</h5>
+                  </div>
+                  <div
+                    class="bg-[#3086C8] text-[14px] font-[400] flex gap-[8px] text-white w-fit rounded-[2px] md:py-[8px] py-[4px] md:px-[16px] px-[24px] ">
+                    <span>Call now</span>
+                    <SvgRightArrowWhite class="rightArw" />
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6">
+            <div class="p-[32px] bg-[#FFFFFF]">
+
+              <div class=" flex gap-[24px] flex-col md:flex-row">
+                <div class="bg-[#EAF6FE] w-[96px] h-[96px] p-5 flex items-center justify-center">
+                  <SvgContact2 />
+                </div>
+                <div class="flex flex-col gap-[24px]">
+                  <div class="flex flex-col gap-[16px]">
+                    <h5 class="font-[600] text-[18px]">Chat with us</h5>
+                    <p class="font-[400] text-[14px] text-[#5F6C72]">we are available online from 9:00 AM to 5:00 PM (GMT95:45) Talk with use now</p>
+                    <h5 class="text-[24px] font-[400]">Support@clicon.com</h5>
+                  </div>
+                  <div
+                    class="bg-[#2DB224] text-[14px] font-[400] flex gap-[8px] text-white w-fit rounded-[2px] md:py-[8px] py-[4px] md:px-[16px] px-[24px] ">
+                    <span>Contact Us</span>
+                    <SvgRightArrowWhite class="rightArw" />
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
