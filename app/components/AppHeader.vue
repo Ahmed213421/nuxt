@@ -3,7 +3,7 @@
 
     <header class="flex container p-2 xl:p-0 mx-auto justify-between items-center">
       <NuxtLink to="/">
-        <div class="flex hidden xl:block">
+        <div class="flex hidden md:block">
             <SvgIconHeader />
           </div>
         </NuxtLink>
