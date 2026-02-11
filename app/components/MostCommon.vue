@@ -53,7 +53,7 @@
                 <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
                     <SvgLike />
                 </div>
-                <el-button plain @click="dialogVisible = true" class="border border-[0.92px] !w-[36.65px] !h-[36.65px] !rounded-[50%] !flex !justify-center !items-center !border-[#C65C6A]">
+                <el-button plain @click="dialogVisible = true" class="border border-[0.92px] !bg-white !w-[36.65px] !h-[36.65px] !rounded-[50%] !flex !justify-center !items-center !border-[#C65C6A]">
 
                   
                     <SvgViewItem />

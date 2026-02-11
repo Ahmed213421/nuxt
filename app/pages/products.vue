@@ -2,7 +2,7 @@
     <div>
          <ViewDialog v-model="dialogVisible"/>
         <div class="container mx-auto p-5 xl:p-0">
-            <div class="flex lg:justify-between">
+            <div class="flex flex-col md:flex-row lg:justify-between">
               <Loader />
                 
                 <div class="flex flex-wrap gap-4 items-center">
@@ -46,7 +46,7 @@
                     />
                     </el-select>
                 </div>
-                <div class="flex flex-wrap lg:gap-4   lg:items-center">
+                <div class="flex flex-wrap lg:gap-4 mt-4 md:mt-0  gap-4  lg:items-center">
                     <el-select
                     v-model="sortingValue"
                     :placeholder="`${$t('select.sortBy')} ${sortingValue}`"
@@ -137,7 +137,7 @@
                           <div class="border border-[0.92px] w-[36.65px] h-[36.65px] rounded-[50%] flex justify-center items-center border-[#C65C6A]">
                               <SvgLike />
                           </div>
-                          <el-button plain @click="dialogVisible = true" class="border border-[0.92px] !w-[36.65px] !h-[36.65px] !rounded-[50%] !flex !justify-center !items-center !border-[#C65C6A]">
+                          <el-button plain @click="dialogVisible = true" class="border border-[0.92px] !bg-white !w-[36.65px] !h-[36.65px] !rounded-[50%] !flex !justify-center !items-center !border-[#C65C6A]">
 
                             
                               <SvgViewItem />
