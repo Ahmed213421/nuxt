@@ -76,14 +76,14 @@ Register	https://lnkd.in/dWtTn2Rc
 
 Forget Password	https://lnkd.in/dNCXs4xu
 
-Reset Password	https://lnkd.in/dG2hW2Qz
-💻 Project Setup (Run Locally)
-1️⃣ Clone the repository
-git clone https://github.com/yourusername/project-name.git
-2️⃣ Go to the project folder
-cd project-name
-3️⃣ Install dependencies
-npm install
+## 💻 Project Setup (Run Locally)
+
+| Step | Action | Command |
+|---|---|---|
+| 1️⃣ | Clone Repository | `git clone https://github.com/yourusername/project-name.git` |
+| 2️⃣ | Navigate to Project | `cd project-name` |
+| 3️⃣ | Install Dependencies | `npm install` |
+| 4️⃣ | Run Development Server | `npm run dev` |
 
 or
 
