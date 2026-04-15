@@ -1,5 +1,6 @@
 <template>
   <div class="container mx-auto">
+    <ViewDialog v-model="dialogVisible"/>
     
     <div class="flex flex-col gap-[12px]">
       <h1 class="text-[20px] font-[600] text-[#191C1F]">Hello, Kevin</h1>
@@ -456,6 +457,9 @@ import 'swiper/css/grid'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
+import ViewDialog from '~/components/ViewDialog.vue'
+
+const dialogVisible = ref(false)
 
 const tableData = [
   {

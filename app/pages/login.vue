@@ -12,7 +12,7 @@
                         </div>
                         <div class="relative">
                             <h1>password</h1>
-                            <input type="password" v-model="password" ref="input" placeholder="enter your passworrd" class="login-input mt-[6.5px] md:!w-[400px]">
+                            <input type="password" v-model="password" ref="input" placeholder="enter your password" class="login-input mt-[6.5px] md:!w-[400px]">
                             <svg width="27" height="27" viewBox="0 0 27 27" @click="view" class="absolute top-10 end-2 cursor-pointer" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -52,7 +52,7 @@
                     </div>
                     <div class=" w-full cursor-pointer">
                         <div class="w-[100%] border border-[#E4E7E9] rounded-[12px] px-4 py-3">
-                            <div class="w-[68%] flex justify-between">
+                            <div class="w-[73%] md:w-[72%] flex justify-between">
                                 <div>
                                     <SvgFacebookLogin />
                                 </div>

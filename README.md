@@ -29,52 +29,52 @@ Multi-language Support (EN / AR)
 
 🌐 Main Pages
 Page	Live Link
-Home	https://lnkd.in/d6CiruzH
+Home	https://ecommerce-with-nuxt.netlify.app/en
 
-Products	https://lnkd.in/dMwmH5j8
+Products	https://ecommerce-with-nuxt.netlify.app/en/products
 
-Product Details	https://lnkd.in/dMcDVsyV
+Product Details	https://ecommerce-with-nuxt.netlify.app/en/products/1
 
-Product Skin	https://lnkd.in/dv3tT_xB
+Product Skin	https://ecommerce-with-nuxt.netlify.app/en/products/skin
 
-Dashboard	https://lnkd.in/drfCdbBV
+Dashboard	https://ecommerce-with-nuxt.netlify.app/en/dashboard
 📊 Dashboard Pages
 
 ⚠️ Login with any data before accessing dashboard pages
 
 Page	Live Link
-Order History	https://lnkd.in/dW9zrKgj
+Order History	https://ecommerce-with-nuxt.netlify.app/en/dashboard/orders
 
-Order Details	https://lnkd.in/dXgmwVZn
+Order Details	https://ecommerce-with-nuxt.netlify.app/en/dashboard/orders/1
 
-Compare	https://lnkd.in/d9r6deaA
+Compare	https://ecommerce-with-nuxt.netlify.app/en/dashboard/compare
 
-Address	https://lnkd.in/duNdQSFM
+Address	https://ecommerce-with-nuxt.netlify.app/en/dashboard/address
 
-Settings	https://lnkd.in/dC4-U2iF
+Settings	https://ecommerce-with-nuxt.netlify.app/en/dashboard/settings
 
-Wish List	https://lnkd.in/dqfk_a3v
+Wish List	https://ecommerce-with-nuxt.netlify.app/en/dashboard/wishlist
 
-FAQs	https://lnkd.in/dXTuSrcV
+FAQs	https://ecommerce-with-nuxt.netlify.app/en/faq
 
-Error Page	https://lnkd.in/dQ3S7uiz
+Error Page	https://ecommerce-with-nuxt.netlify.app/en/error
 
-Checkout Success	https://lnkd.in/duei-t2q
+Checkout Success	https://ecommerce-with-nuxt.netlify.app/en/checkout/success
 
-Shopping Cart	https://lnkd.in/d_4-RRha
+Shopping Cart	https://ecommerce-with-nuxt.netlify.app/en/cart
 
-Track Order	https://lnkd.in/dYbnwm8X
+Track Order	https://ecommerce-with-nuxt.netlify.app/en/track-order
 
-Checkout	https://lnkd.in/dfN9zkkc
+Checkout	https://ecommerce-with-nuxt.netlify.app/en/checkout
 
-Customer Support	https://lnkd.in/dDTm4VQQ
+Customer Support	https://ecommerce-with-nuxt.netlify.app/en/support
 🔐 Authentication Pages
 Page	Live Link
-Login	https://lnkd.in/d9bjA2TV
+Login	https://ecommerce-with-nuxt.netlify.app/en/login
 
-Register	https://lnkd.in/dWtTn2Rc
+Register	https://ecommerce-with-nuxt.netlify.app/en/register
 
-Forget Password	https://lnkd.in/dNCXs4xu
+Forget Password	https://ecommerce-with-nuxt.netlify.app/en/forgot-password
 
 ## 💻 Project Setup (Run Locally)
 

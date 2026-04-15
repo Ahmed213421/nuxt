@@ -1,6 +1,6 @@
 <template>
     <div class="container mx-auto mb-5">
-        <div class="grid grid-cols-12 gap-10">
+        <div class="grid grid-cols-12 md:gap-10">
 
             <div class="lg:col-span-6 col-span-12">
                 <div>

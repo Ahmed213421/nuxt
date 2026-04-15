@@ -169,7 +169,7 @@
                                     </el-form>
                                     </div>
                                     <div class="grid grid-cols-12 gap-4">
-                                        <div class="md:col-span-12 col-span-3">
+                                        <div class="md:col-span-12 col-span-6">
                                             <div>
 
                                                 <el-form :label-position="labelPosition" label-width="auto"
@@ -184,7 +184,7 @@
                                                 </el-form>
                                             </div>
                                         </div>
-                                        <div class="md:col-span-12 col-span-3">
+                                        <div class="md:col-span-12 col-span-6">
                                             <div>
 
                                                 <el-form :label-position="labelPosition" label-width="auto"
@@ -199,7 +199,7 @@
                                                 </el-form>
                                             </div>
                                         </div>
-                                        <div class="md:col-span-6 col-span-3">
+                                        <div class="md:col-span-6 col-span-6">
                                             <div>
 
                                                 <el-form :label-position="labelPosition" label-width="auto"
@@ -214,7 +214,7 @@
                                                 </el-form>
                                             </div>
                                         </div>
-                                        <div class="md:col-span-6 col-span-3">
+                                        <div class="md:col-span-6 col-span-6">
                                             <div>
 
                                                 <el-form :label-position="labelPosition" label-width="auto"
@@ -302,7 +302,7 @@
                                     </el-form>
                                     </div>
                                     <div class="grid grid-cols-12 gap-4">
-                                        <div class="md:col-span-12 col-span-3">
+                                        <div class="md:col-span-12 col-span-6">
                                             <div>
 
                                                 <el-form :label-position="labelPosition" label-width="auto"
@@ -317,7 +317,7 @@
                                                 </el-form>
                                             </div>
                                         </div>
-                                        <div class="md:col-span-12 col-span-3">
+                                        <div class="md:col-span-12 col-span-6">
                                             <div>
 
                                                 <el-form :label-position="labelPosition" label-width="auto"
@@ -332,7 +332,7 @@
                                                 </el-form>
                                             </div>
                                         </div>
-                                        <div class="md:col-span-6 col-span-3">
+                                        <div class="md:col-span-6 col-span-6">
                                             <div>
 
                                                 <el-form :label-position="labelPosition" label-width="auto"
@@ -347,7 +347,7 @@
                                                 </el-form>
                                             </div>
                                         </div>
-                                        <div class="md:col-span-6 col-span-3">
+                                        <div class="md:col-span-6 col-span-6">
                                             <div>
 
                                                 <el-form :label-position="labelPosition" label-width="auto"

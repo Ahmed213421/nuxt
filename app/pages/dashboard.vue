@@ -6,6 +6,8 @@ const isMobile = ref(false)
 
 const localePath = useLocalePath()
 
+const router = useRouter()
+
 const route = useRoute()
 
 console.log(route)
@@ -56,15 +58,39 @@ onBeforeUnmount(() => {
 const menuItems = [
   { label: 'Home', to: '/dashboard',icon:icon1 },
   { label: 'Order History', to: '/dashboard/order-history',icon:icon2 },
-  { label: 'Track Order', to: '/dashboard/order-details',icon:icon3 },
-  { label: 'Shopping Cart', to: '/dashboard/dashboard' ,icon:icon4},
+  { label: 'Track Order', to: '/dashboard/track-order',icon:icon3 },
+  { label: 'Shopping Cart', to: '/dashboard/shopping-card' ,icon:icon4},
   { label: 'Wishlist', to: '/dashboard/wish-list' ,icon:icon5},
   { label: 'Compare', to: '/dashboard/compare' ,icon:icon6},
   { label: 'Cards & Address', to: '/dashboard/address' ,icon:icon7},
-  { label: 'Browsing history', to: '/dashboard/dashboard',icon:icon8 },
+  { label: 'Browsing history', to: '/dashboard/error',icon:icon8 },
   { label: 'Settings', to: '/dashboard/settings' ,icon:icon9},
-  { label: 'Returns', to: '/dashboard/dashboard' ,icon:icon10},
+  { label: 'Returns', to: '/dashboard/error' ,icon:icon10},
 ]
+
+const existingMenuPaths = new Set([
+  '/dashboard',
+  '/dashboard/order-history',
+  '/dashboard/order-details',
+  '/dashboard/track-order',
+  '/dashboard/shopping-card',
+  '/dashboard/wish-list',
+  '/dashboard/compare',
+  '/dashboard/address',
+  '/dashboard/settings',
+  '/dashboard/customer-support',
+  '/dashboard/faqs',
+  '/dashboard/checkout',
+  '/dashboard/checkout-success',
+  '/dashboard/error',
+])
+
+const onMenuNavigate = (to) => {
+  mobileOpen.value = false
+
+  const target = existingMenuPaths.has(to) ? to : '/dashboard/error'
+  router.push(localePath(target))
+}
 
 const isActive = (to) => {
   return route.path === `/${locale.value}${to}` 
@@ -186,16 +212,17 @@ const isActive = (to) => {
       <div class="surface-card border-round overflow-hidden">
         <div class="p-3 font-semibold bg-primary text-white">Dashboard</div>
         <ul class="list-none p-0 m-0">
-          <li class="p-3 border-bottom-1 surface-border">Order History</li>
-          <li class="p-3 border-bottom-1 surface-border">Track Order</li>
-          <li class="p-3 border-bottom-1 surface-border">Shopping Cart</li>
-          <li class="p-3 border-bottom-1 surface-border">Wishlist</li>
-          <li class="p-3 border-bottom-1 surface-border">Compare</li>
-          <li class="p-3 border-bottom-1 surface-border">Cards & Address</li>
-          <li class="p-3 border-bottom-1 surface-border">Browsing History</li>
-          <li class="p-3 border-bottom-1 surface-border">Setting</li>
-          <li class="p-3 border-bottom-1 surface-border">Returns</li>
-          <li class="p-3">Log-out</li>
+          <li v-for="item in menuItems" :key="item.to"
+              class="p-3 border-bottom-1 surface-border flex items-center gap-[12px] cursor-pointer"
+              :class="[{ activeSideBarHome: isActive(item.to)}]"
+              @click="onMenuNavigate(item.to)">
+              <component :is="item.icon" class="dashboard-svg"/>
+              <span>{{ item.label }}</span>
+          </li>
+          <li class="p-3 flex items-center gap-[12px] cursor-pointer" @click="logout">
+            <icon11 class="dashboard-svg"/>
+            <span>Log out</span>
+          </li>
         </ul>
       </div>
     </Sidebar>

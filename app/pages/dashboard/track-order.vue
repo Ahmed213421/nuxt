@@ -2,7 +2,7 @@
     <div class="container mx-auto p-5">
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-12">
-                <div class="shadow-[0px_4px_16.1px_0px_rgba(0,0,0,0.07)] flex flex-col gap-[12px] bg-[#FFFAFA] !py-[48px] px-[300px]">
+                <div class="shadow-[0px_4px_16.1px_0px_rgba(0,0,0,0.07)] flex flex-col gap-[12px] bg-[#FFFAFA] !py-[48px] lg:px-[300px]">
                     <h2 class="text-[32px] font-[600]">Track Order</h2>
                     <p class="font-[400] text-[16px] text-[#5F6C72]">To track your order please enter your order ID in
                         the input field below and press the “Track Order” button. this was given to you on your receipt

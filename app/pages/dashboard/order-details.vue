@@ -123,8 +123,8 @@
                     <div class="p-4 border-b-[#E4E7E9]  border-b">
                         <h1 class="font-[500] text-[18x] text-[#191C1F]">Order Activity</h1>
                         <ul>
-                            <li class="!flex gap-[16px]">
-                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center">
+                            <li class="!flex gap-[16px] sm:flex-row">
+                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center flex-shrink-0">
                                     <SvgActivity1 />
                                 </div>
                                 <div class="flex flex-col gap-[8px] text-[14px] font-[400]">
@@ -133,8 +133,8 @@
                                     <span class="text-[#77878F]">23 Jan, 2021 at 7:32 PM</span>
                                 </div>
                             </li>
-                            <li class="!flex gap-[16px]">
-                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center">
+                            <li class="!flex gap-[16px] flex-col sm:flex-row">
+                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center flex-shrink-0">
                                     <SvgActivity2 />
                                 </div>
                                 <div class="flex flex-col gap-[8px] text-[14px] font-[400]">
@@ -143,8 +143,8 @@
                                     <span class="text-[#77878F]">23 Jan, 2021 at 7:32 PM</span>
                                 </div>
                             </li>
-                            <li class="!flex gap-[16px]">
-                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center">
+                            <li class="!flex gap-[16px] flex-col sm:flex-row">
+                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center flex-shrink-0">
                                     <SvgActivity3 />
                                 </div>
                                 <div class="flex flex-col gap-[8px] text-[14px] font-[400]">
@@ -152,8 +152,8 @@
                                     <span class="text-[#77878F]">23 Jan, 2021 at 7:32 PM</span>
                                 </div>
                             </li>
-                            <li class="!flex gap-[16px]">
-                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center">
+                            <li class="!flex gap-[16px] flex-col sm:flex-row">
+                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center flex-shrink-0">
                                     <SvgActivity4 />
                                 </div>
                                 <div class="flex flex-col gap-[8px] text-[14px] font-[400]">
@@ -161,8 +161,8 @@
                                     <span class="text-[#77878F]">23 Jan, 2021 at 7:32 PM</span>
                                 </div>
                             </li>
-                            <li class="!flex gap-[16px]">
-                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center">
+                            <li class="!flex gap-[16px] flex-col sm:flex-row">
+                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center flex-shrink-0">
                                     <SvgActivity5 />
                                 </div>
                                 <div class="flex flex-col gap-[8px] text-[14px] font-[400]">
@@ -170,8 +170,8 @@
                                     <span class="text-[#77878F]">23 Jan, 2021 at 7:32 PM</span>
                                 </div>
                             </li>
-                            <li class="!flex gap-[16px]">
-                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center">
+                            <li class="!flex gap-[16px] flex-col sm:flex-row">
+                                <div class="bg-[#EAF7E9] w-[48px] h-[48px] flex items-center justify-center flex-shrink-0">
                                     <SvgActivity6 />
                                 </div>
                                 <div class="flex flex-col gap-[8px] text-[14px] font-[400]">
