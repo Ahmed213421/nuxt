@@ -53,7 +53,7 @@ Address	https://ecommerce-with-nuxt.netlify.app/en/dashboard/address
 
 Settings	https://ecommerce-with-nuxt.netlify.app/en/dashboard/settings
 
-Wish List	https://ecommerce-with-nuxt.netlify.app/en/dashboard/wishlist
+Wish List	https://ecommerce-with-nuxt.netlify.app/en/dashboard/wish-list
 
 FAQs	https://ecommerce-with-nuxt.netlify.app/en/dashboard/faqs
 
