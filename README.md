@@ -33,9 +33,9 @@ Home	https://ecommerce-with-nuxt.netlify.app/en
 
 Products	https://ecommerce-with-nuxt.netlify.app/en/products
 
-Product Details	https://ecommerce-with-nuxt.netlify.app/en/products/1
+Product Details	https://ecommerce-with-nuxt.netlify.app/en/product-details
 
-Product Skin	https://ecommerce-with-nuxt.netlify.app/en/products/skin
+Product Skin	https://ecommerce-with-nuxt.netlify.app/en/product-skin
 
 Dashboard	https://ecommerce-with-nuxt.netlify.app/en/dashboard
 📊 Dashboard Pages
