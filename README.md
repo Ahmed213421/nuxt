@@ -55,19 +55,19 @@ Settings	https://ecommerce-with-nuxt.netlify.app/en/dashboard/settings
 
 Wish List	https://ecommerce-with-nuxt.netlify.app/en/dashboard/wishlist
 
-FAQs	https://ecommerce-with-nuxt.netlify.app/en/faq
+FAQs	https://ecommerce-with-nuxt.netlify.app/en/dashboard/faqs
 
-Error Page	https://ecommerce-with-nuxt.netlify.app/en/error
+Error Page	https://ecommerce-with-nuxt.netlify.app/en/dashboard/error
 
-Checkout Success	https://ecommerce-with-nuxt.netlify.app/en/checkout-success
+Checkout Success	https://ecommerce-with-nuxt.netlify.app/en/dashboard/checkout-success
 
-Shopping Cart	https://ecommerce-with-nuxt.netlify.app/en/shopping-cart
+Shopping Cart	https://ecommerce-with-nuxt.netlify.app/en/dashboard/shopping-cart
 
-Track Order	https://ecommerce-with-nuxt.netlify.app/en/track-order
+Track Order	https://ecommerce-with-nuxt.netlify.app/en/dashboard/track-order
 
-Checkout	https://ecommerce-with-nuxt.netlify.app/en/checkout
+Checkout	https://ecommerce-with-nuxt.netlify.app/en/dashboard/checkout
 
-Customer Support	https://ecommerce-with-nuxt.netlify.app/en/customer-support
+Customer Support	https://ecommerce-with-nuxt.netlify.app/en/dashboard/customer-support
 
 
 🔐 Authentication Pages
@@ -77,6 +77,9 @@ Login	https://ecommerce-with-nuxt.netlify.app/login
 Register	https://ecommerce-with-nuxt.netlify.app/register
 
 Forget Password	https://ecommerce-with-nuxt.netlify.app/forget-password
+
+
+Reset Password	https://ecommerce-with-nuxt.netlify.app/reset-password
 
 ## 💻 Project Setup (Run Locally)
 
