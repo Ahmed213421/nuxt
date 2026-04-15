@@ -72,11 +72,11 @@ Customer Support	https://ecommerce-with-nuxt.netlify.app/en/support
 
 🔐 Authentication Pages
 Page	Live Link
-Login	https://ecommerce-with-nuxt.netlify.app/en/login
+Login	https://ecommerce-with-nuxt.netlify.app/login
 
-Register	https://ecommerce-with-nuxt.netlify.app/en/register
+Register	https://ecommerce-with-nuxt.netlify.app/register
 
-Forget Password	https://ecommerce-with-nuxt.netlify.app/en/forgot-password
+Forget Password	https://ecommerce-with-nuxt.netlify.app/forget-password
 
 ## 💻 Project Setup (Run Locally)
 
