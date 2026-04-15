@@ -67,7 +67,7 @@ Track Order	https://ecommerce-with-nuxt.netlify.app/en/track-order
 
 Checkout	https://ecommerce-with-nuxt.netlify.app/en/checkout
 
-Customer Support	https://ecommerce-with-nuxt.netlify.app/en/support
+Customer Support	https://ecommerce-with-nuxt.netlify.app/en/customer-upport
 
 
 🔐 Authentication Pages
