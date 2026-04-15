@@ -43,9 +43,9 @@ Dashboard	https://ecommerce-with-nuxt.netlify.app/en/dashboard
 ⚠️ Login with any data before accessing dashboard pages
 
 Page	Live Link
-Order History	https://ecommerce-with-nuxt.netlify.app/en/dashboard/orders
+Order History	https://ecommerce-with-nuxt.netlify.app/en/dashboard/order-history
 
-Order Details	https://ecommerce-with-nuxt.netlify.app/en/dashboard/orders/1
+Order Details	https://ecommerce-with-nuxt.netlify.app/en/dashboard/order-details
 
 Compare	https://ecommerce-with-nuxt.netlify.app/en/dashboard/compare
 
