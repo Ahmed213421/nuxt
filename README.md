@@ -61,7 +61,8 @@ Error Page	https://ecommerce-with-nuxt.netlify.app/en/dashboard/error
 
 Checkout Success	https://ecommerce-with-nuxt.netlify.app/en/dashboard/checkout-success
 
-Shopping Cart	https://ecommerce-with-nuxt.netlify.app/en/dashboard/shopping-cart
+Shopping Cart	https://ecommerce-with-nuxt.netlify.app/en/dashboard/shopping-card
+
 
 Track Order	https://ecommerce-with-nuxt.netlify.app/en/dashboard/track-order
 
