@@ -59,9 +59,9 @@ FAQs	https://ecommerce-with-nuxt.netlify.app/en/faq
 
 Error Page	https://ecommerce-with-nuxt.netlify.app/en/error
 
-Checkout Success	https://ecommerce-with-nuxt.netlify.app/en/checkout/success
+Checkout Success	https://ecommerce-with-nuxt.netlify.app/en/checkout-success
 
-Shopping Cart	https://ecommerce-with-nuxt.netlify.app/en/cart
+Shopping Cart	https://ecommerce-with-nuxt.netlify.app/en/shopping-cart
 
 Track Order	https://ecommerce-with-nuxt.netlify.app/en/track-order
 
