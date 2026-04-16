@@ -23,9 +23,10 @@
 
                 <div class="flex flex-col gap-4 md:items-center md:text-center xl:items-start xl:text-left">
                     <h1 :class="locale === 'ar'
-                            ? 'after:right-0 after:left-auto md:after:left-1/2 md:after:right-auto md:after:-translate-x-1/2 xl:after:right-0 xl:after:left-auto xl:after:translate-x-0'
-                            : 'after:left-0 md:after:left-1/2 md:after:-translate-x-1/2 xl:after:left-0 xl:after:translate-x-0'
-                        " class="font-semibold text-xl relative after:content-[''] after:absolute after:bottom-[-5px] after:h-[1px] after:w-[60px] after:bg-black">
+                        ? 'after:right-0 after:left-auto md:after:left-1/2 md:after:right-auto md:after:-translate-x-1/2 xl:after:right-0 xl:after:left-auto xl:after:translate-x-0'
+                        : 'after:left-0 md:after:left-1/2 md:after:-translate-x-1/2 xl:after:left-0 xl:after:translate-x-0'
+                        "
+                        class="font-semibold text-xl relative after:content-[''] after:absolute after:bottom-[-5px] after:h-[1px] after:w-[60px] after:bg-black">
                         {{ $t('getInTouch') }}
                     </h1>
 
@@ -53,10 +54,11 @@
                 </div>
 
                 <div class="flex flex-col gap-4 md:items-center md:text-center xl:items-start xl:text-left">
-                   <h1 :class="locale === 'ar'
-                            ? 'after:right-0 after:left-auto md:after:left-1/2 md:after:right-auto md:after:-translate-x-1/2 xl:after:right-0 xl:after:left-auto xl:after:translate-x-0'
-                            : 'after:left-0 md:after:left-1/2 md:after:-translate-x-1/2 xl:after:left-0 xl:after:translate-x-0'
-                        " class="font-semibold text-xl relative after:content-[''] after:absolute after:bottom-[-5px] after:h-[1px] after:w-[60px] after:bg-black">
+                    <h1 :class="locale === 'ar'
+                        ? 'after:right-0 after:left-auto md:after:left-1/2 md:after:right-auto md:after:-translate-x-1/2 xl:after:right-0 xl:after:left-auto xl:after:translate-x-0'
+                        : 'after:left-0 md:after:left-1/2 md:after:-translate-x-1/2 xl:after:left-0 xl:after:translate-x-0'
+                        "
+                        class="font-semibold text-xl relative after:content-[''] after:absolute after:bottom-[-5px] after:h-[1px] after:w-[60px] after:bg-black">
                         {{ $t('usefulLink') }}
                     </h1>
 
@@ -73,9 +75,10 @@
 
                 <div class="flex flex-col gap-4 md:items-center md:text-center xl:items-start xl:text-left">
                     <h1 :class="locale === 'ar'
-                            ? 'after:right-0 after:left-auto md:after:left-1/2 md:after:right-auto md:after:-translate-x-1/2 xl:after:right-0 xl:after:left-auto xl:after:translate-x-0'
-                            : 'after:left-0 md:after:left-1/2 md:after:-translate-x-1/2 xl:after:left-0 xl:after:translate-x-0'
-                        " class="font-semibold text-xl relative after:content-[''] after:absolute after:bottom-[-5px] after:h-[1px] after:w-[60px] after:bg-black">
+                        ? 'after:right-0 after:left-auto md:after:left-1/2 md:after:right-auto md:after:-translate-x-1/2 xl:after:right-0 xl:after:left-auto xl:after:translate-x-0'
+                        : 'after:left-0 md:after:left-1/2 md:after:-translate-x-1/2 xl:after:left-0 xl:after:translate-x-0'
+                        "
+                        class="font-semibold text-xl relative after:content-[''] after:absolute after:bottom-[-5px] after:h-[1px] after:w-[60px] after:bg-black">
                         {{ $t('campaign') }}
                     </h1>
 
@@ -95,11 +98,12 @@
 
         <div class="mt-10">
             <div
-                class="container mx-auto xl:px-[70px] flex flex-col md:items-center md:text-center xl:flex-row xl:items-center xl:justify-between xl:text-left gap-4">
+                class="container mx-auto  flex flex-col md:items-center md:text-center xl:flex-row xl:items-center xl:justify-between xl:text-left gap-4">
                 <h1 :class="locale === 'ar'
-                        ? 'after:right-0 after:left-auto md:after:left-1/2 md:after:right-auto md:after:-translate-x-1/2 xl:after:right-0 xl:after:left-auto xl:after:translate-x-0'
-                        : 'after:left-0 md:after:left-1/2 md:after:-translate-x-1/2 xl:after:left-0 xl:after:translate-x-0'
-                    " class="font-semibold text-xl relative after:content-[''] after:absolute after:bottom-[-5px] after:h-[1px] after:w-[60px] after:bg-black">
+                    ? 'after:right-0 after:left-auto md:after:left-1/2 md:after:right-auto md:after:-translate-x-1/2 xl:after:right-0 xl:after:left-auto xl:after:translate-x-0'
+                    : 'after:left-0 md:after:left-1/2 md:after:-translate-x-1/2 xl:after:left-0 xl:after:translate-x-0'
+                    "
+                    class="font-semibold text-xl relative after:content-[''] after:absolute after:bottom-[-5px] after:h-[1px] after:w-[60px] after:bg-black">
                     {{ $t('paymentMethods') }}
                 </h1>
 
