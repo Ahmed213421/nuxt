@@ -144,12 +144,27 @@ const isActive = (to) => {
           </el-breadcrumb-item>
           <el-breadcrumb-item v-if="route.path.includes(`dashboard/compare`) "><span
               :class="route.path.includes(`dashboard/compare`) ? 'text-[#C65C6A]' : ''">{{
-                $t('compare')
+                $t('Compare')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`dashboard/track-order`) "><span
+              :class="route.path.includes(`dashboard/track-order`) ? 'text-[#C65C6A]' : ''">{{
+                $t('Track Order')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`dashboard/shopping-card`) "><span
+              :class="route.path.includes(`dashboard/shopping-card`) ? 'text-[#C65C6A]' : ''">{{
+                $t('Shopping Cart')
               }}</span>
           </el-breadcrumb-item>
           <el-breadcrumb-item v-if="route.path.includes(`dashboard/settings`) "><span
               :class="route.path.includes(`dashboard/settings`) ? 'text-[#C65C6A]' : ''">{{
                 $t('Settings')
+              }}</span>
+          </el-breadcrumb-item>
+          <el-breadcrumb-item v-if="route.path.includes(`dashboard/address`) "><span
+              :class="route.path.includes(`dashboard/address`) ? 'text-[#C65C6A]' : ''">{{
+                $t('Cards & Address')
               }}</span>
           </el-breadcrumb-item>
           <el-breadcrumb-item v-if="route.path.includes(`dashboard/customer-support`) "><span

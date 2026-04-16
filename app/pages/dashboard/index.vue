@@ -186,21 +186,10 @@
              rounded-md bg-white shadow-lg ring-1 ring-black/5 text-black">
                   <MenuItem v-slot="{ active }">
                   <button :class="['block w-full px-4 py-2 text-left text-sm', active && 'bg-gray-100']">
-                    View profile
+                    Remove Card
                   </button>
                   </MenuItem>
 
-                  <MenuItem v-slot="{ active }">
-                  <button :class="['block w-full px-4 py-2 text-left text-sm', active && 'bg-gray-100']">
-                    Edit
-                  </button>
-                  </MenuItem>
-
-                  <MenuItem v-slot="{ active }">
-                  <button :class="['block w-full px-4 py-2 text-left text-sm text-red-600', active && 'bg-gray-100']">
-                    Logout
-                  </button>
-                  </MenuItem>
                 </MenuItems>
               </div>
             </Menu>
@@ -243,21 +232,11 @@
              rounded-md bg-white shadow-lg ring-1 ring-black/5 text-black">
                   <MenuItem v-slot="{ active }">
                   <button :class="['block w-full px-4 py-2 text-left text-sm', active && 'bg-gray-100']">
-                    View profile
+                    Remove Card
                   </button>
                   </MenuItem>
 
-                  <MenuItem v-slot="{ active }">
-                  <button :class="['block w-full px-4 py-2 text-left text-sm', active && 'bg-gray-100']">
-                    Edit
-                  </button>
-                  </MenuItem>
-
-                  <MenuItem v-slot="{ active }">
-                  <button :class="['block w-full px-4 py-2 text-left text-sm text-red-600', active && 'bg-gray-100']">
-                    Logout
-                  </button>
-                  </MenuItem>
+                  
                 </MenuItems>
               </div>
             </Menu>
